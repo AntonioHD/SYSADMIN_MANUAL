@@ -19,12 +19,13 @@ Quitamos unidades de almacenamiento:
 
 Ponemos el adaptador en red interna:
 
-![configuracionprevia](/pictures/3.png)
+![configuracionprevia](pictures/3.png)
 ##3. Instalación del sistema operativo (Ubuntu 64 bits)
 
 En este apartado realizaremos la instalación del sistema operativo, así como la configuración de las tarjetas de red y el nombre de equipo, dominio, usuario...También crearemos 3 usuarios, uno para cada cliente ligero, dentro del sistema.
 	
-	
+![configuracionprevia](pictures/4.png)
+![configuracionprevia](pictures/5.png)
 	
 ##4. Instalar servicio LTSP
 ##5. Arranque de los clientes ligeros
