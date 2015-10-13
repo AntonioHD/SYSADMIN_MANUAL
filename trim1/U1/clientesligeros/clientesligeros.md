@@ -11,17 +11,18 @@ Antes de comenzar esta práctica, configuraremos 3 máquinas virtulas: 2 máquin
 
 En el cliente seleccionamos que inicie por red:
 
-![configuracionprevia](/pictures/1.png)
+![configuracionprevia](pictures/1.png)
 
 Quitamos unidades de almacenamiento:
 
-![configuracionprevia](/pictures/2.png)
+![configuracionprevia](pictures/2.png)
 
 Ponemos el adaptador en red interna:
 
 ![configuracionprevia](/pictures/3.png)
 ##3. Instalación del sistema operativo (Ubuntu 64 bits)
-	En este apartado realizaremos la instalación del sistema operativo, así como la configuración de las tarjetas de red y el nombre de equipo, dominio, usuario...También crearemos 3 usuarios, uno para cada cliente ligero, dentro del sistema.
+
+En este apartado realizaremos la instalación del sistema operativo, así como la configuración de las tarjetas de red y el nombre de equipo, dominio, usuario...También crearemos 3 usuarios, uno para cada cliente ligero, dentro del sistema.
 	
 	
 	
