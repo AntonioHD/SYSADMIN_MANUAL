@@ -31,4 +31,12 @@ En este apartado realizaremos la instalación del sistema operativo, así como l
 ##5. Arranque de los clientes ligeros
 Vídeo:
 
-![https://www.youtube.com/watch?v=4Vf-DP_Vrp4](http://img.youtube.com/vi/4Vf-DP_Vrp4/0.jpg)
+[![LTSP Antonio Hernandez Dominguez](pictures/0.jpg)](https://www.youtube.com/watch?v=4Vf-DP_Vrp4 "LTSP Antonio Hernandez Dominguez")
+
+
+
+
+
+
+
+
