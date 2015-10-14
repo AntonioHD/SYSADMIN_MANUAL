@@ -30,4 +30,5 @@ En este apartado realizaremos la instalación del sistema operativo, así como l
 ##4. Instalar servicio LTSP
 ##5. Arranque de los clientes ligeros
 Vídeo:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4Vf-DP_Vrp4" frameborder="0" allowfullscreen></iframe>
+
+![](http://img.youtube.com/vi/4Vf-DP_Vrp4/0.jpg)
