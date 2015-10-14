@@ -91,7 +91,6 @@ Una vez hecho, iniciamos la máquina cliente y vemos si conecta y si obtiene la 
 
 Para terminar esta práctica, se ha llevado a cabo la grabación de un vídeo en el que se muestre el correcto funcionamiento de los clientes ligeros al arrancar tomando el servicio de LTSP que le proporciona la máquina servidora:
 
-(cick en la imagen)
 
 [![LTSP Antonio Hernandez Dominguez](pictures/0.jpg)](https://www.youtube.com/watch?v=4Vf-DP_Vrp4 "LTSP Antonio Hernandez Dominguez")
 
