@@ -16,7 +16,7 @@ if list.count==0
    exit
 end
 
-#Eliminamos los usuarios del array el sistema
+#Eliminamos los usuarios contenidos en el array el sistema
 list.each do |nombreusuario|
   `sudo userdel #{nombreusuario}`
   puts "se ha eliminado el usuario "+nombreusuario
