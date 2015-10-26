@@ -1,3 +1,5 @@
+[!["LOGO"](files/logo.png)](http://blog.iespuertodelacruz.es/)
+***
 #Clientes ligeros con LTSP (En Linux)
 ##1. Introducción
 En esta tarea hemos visto una herramienta bastante útil para cuando, por las circunstancias que sean, se disponen de varios equipos que carecen de unidades de almacenamiento y de unidades ópticas, que nos posibiliten el arranque por medio de  los mismos de algún sistema operativo. O también porque dichas máquinas no tienen suficientes prestaciones a nivel de rendimiento, ya sea porque están anticuadas u obsoletas. 
