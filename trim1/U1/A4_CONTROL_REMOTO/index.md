@@ -1,10 +1,8 @@
-<ul>
-    <li><b>Módulo:</b> Administración de Sistemas Operativos</li>
-    <li><b>Título del trabajo:</b> A4: Control Remoto</li>
-    <li><b>Alumno:</b> Antonio Hernández Domínguez</li>
-    <li><b>Curso Académico:</b> 2015/2016</li>
-    <li><b>Fecha de entrega:</b> 27/10/2015</li>
-</ul>
+* **Módulo:** Administración de Sistemas Operativos
+* **Título del trabajo:** A4.- Control Remoto
+* **Alumno** Antonio Hernández Domínguez
+* **Curso Académico:** 2015/2016
+* **Fecha de entrega** 27/10/2015
 
 [![LOGO](/files/logo.png)](http://blog.iespuertodelacruz.es/)
 
