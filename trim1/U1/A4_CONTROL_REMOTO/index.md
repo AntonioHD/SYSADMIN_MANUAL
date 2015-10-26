@@ -8,14 +8,30 @@
 </p>
 
 ##1.1.
+<p align=justify>
+</p>
 
 #2.
+<p align=justify>
 	Para realizar la creación de nuestro fichero de respuesta de haremos uso de la herramienta "AIK" de windows. Antes de instalar dicha herramienta, cogeremos nuestra iso del sistema y, con los ficheros extraídos, la situamos en "C:\":
+</p>
 
 ##2.1.
+<p align=justify>
+</p>
+
 #3.
+<p align=justify>
+</p>
+
 ##3.1.
+<p align=justify>
+</p>
+
 #4.
+<p align=justify>
+</p>
+
 ##4.1.
 #5.
 ##5.1.
