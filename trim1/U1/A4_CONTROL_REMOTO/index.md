@@ -4,7 +4,7 @@
 * **Curso Académico:** 2015/2016
 * **Fecha de entrega** 27/10/2015
 
-[![LOGO](/files/logo.png)](http://blog.iespuertodelacruz.es/)
+[![LOGO](files/logo.png)](http://blog.iespuertodelacruz.es/)
 
 
 #1. Introducción
