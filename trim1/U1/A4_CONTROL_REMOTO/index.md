@@ -1,4 +1,4 @@
-[![LOGO     ](files/logo.png)](http://blog.iespuertodelacruz.es/)
+[			!["LOGO"](files/logo.png)](http://blog.iespuertodelacruz.es/)
 
 ***
 * **Módulo:** Administración de Sistemas Operativos
