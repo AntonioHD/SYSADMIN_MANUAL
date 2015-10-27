@@ -127,7 +127,7 @@ Al ejecutar el cliente de conexión a Escritorio remoto se mostrará la siguient
 
 ![terminalserver](files/TS/conexion-remota.png)
 
-He utilizado al usuario "Antonio" para establecer esta conexión al escritorio remoto. EJecutando el comando "netstat" aparecen las conexiones:
+He utilizado al usuario "Antonio" para establecer esta conexión al escritorio remoto. Ejecutando el comando "netstat" aparecen las conexiones:
  
 ![terminalserver](files/TS/windows-windows-remoto.png)
 
