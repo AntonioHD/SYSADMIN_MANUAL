@@ -25,7 +25,7 @@ que soporte VNC conectándose desde otro ordenador o dispositivo que disponga de
 ***
 ##1. Windows a Windows
 En primer lugar, probaremos a realizar la instalación y configuraciónen un máquinas windows, y accederemos desde otra con el mismo sistema operativo. Para ello, utilizaremos
-el programa "TightVNC", que descargaremos desde su página oficial: [](http://www.tightvnc.com/download.php).
+el programa "TightVNC", que descargaremos desde su página oficial: [this link](http://www.tightvnc.com/download.php)a.
 ###2.1.1. Configuración servidor de escritorio remoto
 ![VNC](files/VNC/02.png)
 ![VNC](files/VNC/03.png)
