@@ -110,15 +110,35 @@ Por último, y desde la máquina cliente Linux que ya teníamos, volvemos a lanz
 
 #3. Conexión escritorio remoto (RDP)
 
+En este apartado haremos uso de la herramienta de acceso remoto RDP ("Remote Desktop Protocol") específica para sistemas operativos windows (ya que es un protocolo propietario desarrollado por Microsoft) a pesar de poder hacer uso de otras como ya hemos visto; para tener acceso remoto a otras máquinas, de entre ellas, una con sistema operativo GNU/Linux.
+
 ##3.1. Windows Server a Windows 7
 
-![RDP](files/RDP/01.png)
-![RDP](files/RDP/02.png)
-![RDP](files/RDP/03.png)
-![RDP](files/RDP/04.png)
+En windows, como ya hemos comentado, viene por defecto el software de "Conexión a Escritorio remoto", de manera que sólo tendremos que configurarlo en el equipo al que queramos acceder vía escritorio remoto y conectarnos haciéndo uso de dicha herramienta.
+
 ###3.1.1. Configuración servidor de escritorio remoto
+
+Nos situamos en "Propiedades del sistema" y en la pestaña "Acceso remoto", seleccionamos la casilla que está debajo de la leyenda "Escritorio Remoto" --> "Permitir las conexiones remotas a este equipo". A su vez, nos da la posibilidad de establecer la condición de que sólo se permitan las conexiones desde equipos con autenticacion a nivel de red, o seleccionar los usuarios que pueden tener acceso remoto al equipo:
+
+![RDP](files/RDP/00.png)
+
 ###3.1.2. Conexión desde cliente Windows
-***
+
+Con la máquina a la que nos queremos conectar iniciada, y desde el cliente, ejecutamos el programa de conexión a escritorio remoto e introducimos la IP de la máquina en cuestión:
+
+![RDP](files/RDP/01.png)
+
+Nos pedriá un usuario del sistema válido por lo que es aconsejable crear uno específico para dicho acceso:
+
+![RDP](files/RDP/02.png)
+
+Nos aparece la siguiente ventana porque no reconoce el equipo que está accediendo, no se ha generado un certificado para ese equipo. Le damos a que se conecte de todos modos y seguimos: 
+
+![RDP](files/RDP/03.png)
+
+Por último nos aparecerá ya la ventana del escritorio remoto:
+
+![RDP](files/RDP/04.png)
 
 ##3.2. Windows 7 a Linux
 
