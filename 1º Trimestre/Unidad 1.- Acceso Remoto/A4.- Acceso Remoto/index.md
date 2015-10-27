@@ -8,7 +8,7 @@
 
 #1. Introducción
 
-En esta actividad hemos utilizado varias herramientas de escritorio remoto con las que poder controlar los equipos de forma remota, instalando estos servicios en las máquinas a controlar (máquinas servidoras) y proporcionando las configuraciones necesarias para poder acceder desde los clientes (controladores) de los mismos. Resulta interesante el funcionamiento de este tipo de software si pensamos en una gran topología de red en la que converjan miles de equipos y sólo se disponga de un único técnico encargado de todos ellos, se ahorraría el engorro de realizar tareas de forma local en cada una de esas máquinas por lo que el escritorio remoto le permite tener a sus disposición todas las máquinas, que tengan instalado previamente dicho software, para ser controladas y gestionadas de forma más eficiente.
+En esta actividad hemos utilizado varias herramientas de escritorio remoto con las que poder controlar los equipos de forma remota, instalando estos servicios en las máquinas a controlar (máquinas servidoras) y proporcionando las configuraciones necesarias para poder acceder desde los clientes (controladores) de los mismos. Resulta interesante el funcionamiento de este tipo de software si pensamos en una gran topología de red en la que convergen decenas de equipos y para la cual sólo se dispone de un único técnico (pobre de él) encargado de todos ellos... se ahorraría el engorro de realizar tareas a nivel local teniendo que desplazarse "físicamente" hasta cada equipo, de manera que el escritorio remoto le permitiría tener a sus disposición todas esas máquinas, para ser controladas y gestionadas de forma más rápida y eficiente.
 
 #2. Conexión escritorio remoto (VNC)
 En éste punto haremos uso del software de escritorio remoto "VNC" (Virtual Network Computing). Lo característico de este programa es que no impone restricciones
@@ -110,24 +110,40 @@ Por último, y desde la máquina cliente Linux que ya teníamos, volvemos a lanz
 
 #3. Conexión escritorio remoto (RDP)
 
-##3.1. Windows Server a Windows 7 
+##3.1. Windows Server a Windows 7
+
+![RDP](files/RDP/01.png)
+![RDP](files/RDP/02.png)
+![RDP](files/RDP/03.png)
+![RDP](files/RDP/04.png)
 ###3.1.1. Configuración servidor de escritorio remoto
 ###3.1.2. Conexión desde cliente Windows
 ***
 
 ##3.2. Windows 7 a Linux
+
+![RDP](files/RDP/05.png)
+![RDP](files/RDP/06.png)
+![RDP](files/RDP/07.png)
+![RDP](files/RDP/08.png)
+
 ###3.2.1. Configuración servidor de escritorio remoto
 ###3.2.2. Conexión desde cliente Windows
 ***
 
 ##3.3. Linux a Windows 7
+
+![RDP](files/RDP/09.png)
+![RDP](files/RDP/10.png)
+![RDP](files/RDP/11.png)
+
 ###3.3.1. Configuración servidor de escritorio remoto
 ###3.3.2. Conexión desde cliente Linux
 ***
 
 #4. Conexión escritorio remoto (Terminal Server)
 
-Con Escritorio remoto es posible establecer hasta dos conexiones remotas simultáneas e independientes, además de la propia sesión de la consola del servidor "Windows 2003 Server".
+Con Terminal Server es posible establecer hasta dos conexiones remotas simultáneas e independientes, además de la propia sesión de la consola del servidor "Windows 2003 Server".
 
 ##4.1. Habilitar Escritorio Remoto
 
