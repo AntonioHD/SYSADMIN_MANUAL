@@ -10,14 +10,12 @@
 
 En esta actividad hemos utilizado varias herramientas de escritorio remoto con las que poder controlar los equipos de forma remota, instalando estos servicios en las máquinas a controlar (máquinas servidoras) y proporcionando las configuraciones necesarias para poder acceder desde los clientes (controladores) de los mismos. Resulta interesante el funcionamiento de este tipo de software si pensamos en una gran topología de red en la que converjan miles de equipos y sólo se disponga de un único técnico encargado de todos ellos, se ahorraría el engorro de realizar tareas de forma local en cada una de esas máquinas por lo que el escritorio remoto le permite tener a sus disposición todas las máquinas, que tengan instalado previamente dicho software, para ser controladas y gestionadas de forma más eficiente.
 
-***
-
 #2. Conexión escritorio remoto (VNC)
 En éste punto haremos uso del software de escritorio remoto "VNC" (Virtual Network Computing). Lo característico de este programa es que no impone restricciones
 en el sistema operativo del ordenador servidor con respecto al del cliente; por lo que es posible compartir la pantalla de una máquina con cualquier sistema operativo 
 que soporte VNC conectándose desde otro ordenador o dispositivo que disponga de un cliente VNC.
-***
-##1. Windows a Windows
+
+##2.1. Windows a Windows
 En primer lugar, probaremos a realizar la instalación y configuraciónen un máquinas windows, y accederemos desde otra con el mismo sistema operativo. Para ello, utilizaremos
 el programa "TightVNC", que descargaremos desde su página oficial: [url página oficial](http://www.tightvnc.com/download.php).
 ###2.1.1. Configuración servidor de escritorio remoto
@@ -74,6 +72,7 @@ Hemos empleado la máquina que ya habíamos utilizado para el cliente windows de
 ![VNC](files/VNC/02.png)
 
 Seguimos, y nos pedirá establecer una contraseña para el acceso remoto y otra contraseña para la administración del servicio de VNC:
+
 ![VNC](files/VNC/10.png)
 
 ###2.3.2. Conexión desde cliente Linux
@@ -85,6 +84,7 @@ Una vez instalado el VNC en el servidor, y con la máquina iniciada, nos situamo
 * Y segundo, iniciar el mismo con el comando ```xtightvncserver```:
 
 ![VNC](files/VNC/11.png)
+
 ***
 
 ##2.4. Linux a Linux
@@ -110,7 +110,6 @@ Por último, y desde la máquina cliente Linux que ya teníamos, volvemos a lanz
 
 #3. Conexión escritorio remoto (RDP)
 
-***
 ##3.1. Windows Server a Windows 7 
 ###3.1.1. Configuración servidor de escritorio remoto
 ###3.1.2. Conexión desde cliente Windows
@@ -129,7 +128,6 @@ Por último, y desde la máquina cliente Linux que ya teníamos, volvemos a lanz
 #4. Conexión escritorio remoto (Terminal Server)
 
 Con Escritorio remoto es posible establecer hasta dos conexiones remotas simultáneas e independientes, además de la propia sesión de la consola del servidor "Windows 2003 Server".
-***
 
 ##4.1. Habilitar Escritorio Remoto
 
@@ -182,9 +180,8 @@ RemoteApp nos permitirá ejecutar aplicaciones que estén instaladas en nuestro 
 como si lo estuvieran en nuestros equipos de escritorio, es decir, nos permite ejecutar
 aplicaciones de forma remota.
 
-***
-
 ##5.1. Instalación en Windows Server
+
 Pasos para la instalación:
 
 - En administración del servidor, nos vamos a características y agregamos una nueva caractirística.
