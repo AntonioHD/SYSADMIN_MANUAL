@@ -1,8 +1,8 @@
 #A4.- ESCRITORIO REMOTO
 ###Participantes del grupo:
-*Antonio Hernández Domínguez
-*Michele Ignacio Linares D'onofrio
-*Miriam Rodríguez Méndez
+* Antonio Hernández Domínguez
+* Michele Ignacio Linares D'onofrio
+* Miriam Rodríguez Méndez
 ***
 
 #1. Introducción
