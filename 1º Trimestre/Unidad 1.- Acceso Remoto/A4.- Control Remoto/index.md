@@ -1,4 +1,8 @@
-[!["LOGO"](files/logo.png)](http://blog.iespuertodelacruz.es/)
+#A4.- ESCRITORIO REMOTO
+###Participantes del grupo:
+*Antonio Hernández Domínguez
+*Michele Ignacio Linares D'onofrio
+*Miriam Rodríguez Méndez
 ***
 
 #1. Introducción
@@ -18,37 +22,37 @@
 ***
 ##1. Windows a Windows
 ###2.1.1. Configuración servidor de escritorio remoto
-[![VNC](files/VNC/02.png)]
-[![VNC](files/VNC/03.png)]
-[![VNC](files/VNC/04.png)]
+![VNC](files/VNC/02.png)
+![VNC](files/VNC/03.png)
+![VNC](files/VNC/04.png)
 ###2.1.2. Conexión desde cliente Windows
 [![VNC](files/VNC/01.png)]
 ***
 
 ##2.2. Windows a Linux
 ###2.2.1. Configuración servidor de escritorio remoto
-[![VNC](files/VNC/05.png)]
-[![VNC](files/VNC/06.png)]
+![VNC](files/VNC/05.png)
+![VNC](files/VNC/06.png)
 ###2.2.2. Conexión desde cliente Windows
-[![VNC](files/VNC/07.png)]
-[![VNC](files/VNC/08.png)]
+![VNC](files/VNC/07.png)
+![VNC](files/VNC/08.png)
 ***
 
 ##2.3. Linux a Windows
 ###2.3.1. Configuración servidor de escritorio remoto
-[![VNC](files/VNC/02.png)]
-[![VNC](files/VNC/03.png)]
-[![VNC](files/VNC/04.png)]
+![VNC](files/VNC/02.png)
+![VNC](files/VNC/03.png)
+![VNC](files/VNC/04.png)
 ###2.3.2. Conexión desde cliente Linux
-[![VNC](files/VNC/09.png)]
+![VNC](files/VNC/09.png)
 ***
 
 ##2.4. Linux a Linux
 ###2.4.1. Configuración servidor de escritorio remoto
-[![VNC](files/VNC/05.png)]
-[![VNC](files/VNC/06.png)]
+![VNC](files/VNC/05.png)
+![VNC](files/VNC/06.png)
 ###2.4.2. Conexión desde cliente Linux
-[![VNC](files/VNC/10.png)]
+![VNC](files/VNC/10.png)
 ***
 
 #3. Conexión escritorio remoto (RDP)
