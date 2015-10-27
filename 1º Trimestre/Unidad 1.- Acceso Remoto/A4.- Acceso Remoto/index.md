@@ -142,41 +142,63 @@ Por último nos aparecerá ya la ventana del escritorio remoto:
 
 ##3.2. Windows 7 a Linux
 
-Como en la conexión anterior, de Windows a Windows, seguimos utilizando el mismo software para el escritorio remoto.
+En este caso haremos uso nuevamente del cliente windows ("Conexión a Escritorio Remoto") pero para conectarnos en esta ocasión a un equipo GNU/Linux. Para poder realizar la conexión remota entre ambas máquina necesitaremos instalar un paquete o software en la maquina servidora Linux que sea compatible con el protocolo RDP de Windows.
 
 ###3.2.1. Configuración servidor de escritorio remoto
 
-Introducimos la IP o el nombre del equipo al que queramos acceder mediante escritorio remoto.
+Hemos instalado el paquete "xrdp" en la máquina Linux para que nos proporcione el servicio RDP, con el comando ```sudo pat-get install xrdp```:
+
+![RDP](files/RDP/04a.png)
+
+No hemos tenido que realizar ningún tipo de configuración por lo que pasamos directamente a ver la conexión desde el cliente.
+
+###3.2.2. Conexión desde cliente Windows
+
+Como en la conexión que realizamos el en punto anterior, de Windows a Windows, utilizando el mismo software para el acceso remoto, aunque en este caso nos estemos conectándo a una máquina Linux.
+
+Introducimos la IP del equipo al que queramos acceder mediante escritorio remoto:
 
 ![RDP](files/RDP/05.png)
 
+Como en el caso anterior nos vuelve a salir la misma advertencia de certificado:
+
 ![RDP](files/RDP/06.png)
 
-###3.2.2. Conexión desde cliente Windows
-***
-
-En este caso estamos conectándonos a una distribución Linux. Introducimos el nombre y contraseña de nuestro usuario.
+A partir de aquí vemos que cambia el estilo de la ventana de login con respecto al apartado anterior, debido a que estamos haciendo uso del paquete "xrdp". En la opción de módulo ponemos ```Module ="sesman-Xvnc"```,  luego introducimos un usuario y contraseña válido del sistema, y  hacemos click en "ok":
 
 ![RDP](files/RDP/07.png)
 
-Por último, comprobamos con el comando "netstat" que la conexión está establecida.
+Nos aparecerá a continuación una ventana con los datos de la conexión:
+
+![RDP](files/RDP/06b.png)
+
+Una vez que termina el proceso de conexión nos aparecerá la ventana con el escritorio remoto de la máquina linux. Par acabar, comprobamos con el comando "netstat" que efectivamente servicio que posibilita la conexión está en funcionamiento:
 
 ![RDP](files/RDP/08.png)
 
 ##3.3. Linux a Windows 7
-En lo que se refiere a la conexión de escritorio remoto de un Linux hacia un Windows, necesitamos descargar algún software que nos permita realizar esta operación, 
-hemos descargado el Remmina.
+
+Debido a que el protocolo RDP es específico para Windows se deben buscar paquetes que sean compatibles con éste para así poder acceder desde una máquina GNU/Linux. En este apartado veremos como realizar ésta tarea y la configuración que requiere el paquete que hemos elegido llamado "remmina".
 
 ###3.3.1. Configuración servidor de escritorio remoto
 
-Es muy fácil de configurar, damos a nueva conexión e introducimos toda la información del cliente que vamos a monitorizar.
+Como cuando realizamos la conexión de windows a windows, nos situamos en "Propiedades del sistema" y en la pestaña "Acceso remoto", seleccionamos la casilla que está debajo de la leyenda "Escritorio Remoto" --> "Permitir las conexiones remotas a este equipo":
 
-![RDP](files/RDP/09.png)
+![RDP](files/RDP/00.png)
 
 ###3.3.2. Conexión desde cliente Linux
-***
 
-Para terminar conectamos y nos dará un certificado.
+En lo que se refiere a la conexión de escritorio remoto de un Linux hacia un Windows, necesitamos descargar algún software que sea compatible con el protocolo RDP de Windows, de manera que nos permita realizar la conexión remota. Hemos optado por el paquete "Remmina". En este caso, la distribución Ubuntu 14.04 lo trae instalado por defecto. Arrancamos el programa desde la terminal con el comando ```remmina``` y se nos abrirá la interfaz de dicho programa:
+
+![RDP](files/RDP/08a.png)
+
+Hacemos click sobre la opción de "Crear un archivo de escritorio remoto" y nos aparecerá lo siguiente:
+
+![RDP](files/RDP/08b.png)
+
+Donde pone "Servidor" introducimos la dirección IP de la máquina a la que queremos conectarnos vía remoto, en el "Nombre de usuario" escribimos uno válido del equipo servidor, y por último nos aseguramos de que el "Protocolo" sea RDP (ya que nos queremos conectar a una máquina windows).
+
+Hacemos click en "conectar" y nos dará un certificado que deberemos aceptar para poder concluir la conexión remota:
 
 ![RDP](files/RDP/10.png)
 
