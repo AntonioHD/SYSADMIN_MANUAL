@@ -146,7 +146,7 @@ En este caso haremos uso nuevamente del cliente windows ("Conexión a Escritorio
 
 ###3.2.1. Configuración servidor de escritorio remoto
 
-Hemos instalado el paquete "xrdp" en la máquina Linux para que nos proporcione el servicio RDP, con el comando ```sudo pat-get install xrdp```:
+Hemos instalado el paquete "xrdp" en la máquina Linux para que nos proporcione el servicio RDP, con el comando ```sudo apt-get install xrdp```:
 
 ![RDP](files/RDP/04a.png)
 
@@ -172,7 +172,7 @@ Nos aparecerá a continuación una ventana con los datos de la conexión:
 
 ![RDP](files/RDP/06b.png)
 
-Una vez que termina el proceso de conexión nos aparecerá la ventana con el escritorio remoto de la máquina linux. Par acabar, comprobamos con el comando "netstat" que efectivamente servicio que posibilita la conexión está en funcionamiento:
+Una vez que termina el proceso de conexión nos aparecerá la ventana con el escritorio remoto de la máquina linux. Para cabar, comprobamos con el comando "netstat" que efectivamente servicio que posibilita la conexión está en funcionamiento:
 
 ![RDP](files/RDP/08.png)
 
