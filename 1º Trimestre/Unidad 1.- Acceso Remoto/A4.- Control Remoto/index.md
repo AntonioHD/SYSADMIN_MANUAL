@@ -34,7 +34,8 @@ Una vez descargado el fichero .msi, lo iniciamos y empezamos la instalación:
 Aprovecharemos que nos da la opción de instalar tanto el software para cliente como para servidor.
 
 ###2.1.2. Conexión desde cliente Windows
-Ahora, una vez instalado también en el cliente el software para escritorio remoto de "tightVNC", ponemos la dirección de la máquina servidora, la máquina a la que conectarnos y hacemos click sobre "connect":
+Ahora, una vez instalado también en el cliente el software para escritorio remoto de "tightVNC" y establecida la configuración de red correcta (id de red.- 172.18.9.0), ponemos 
+la dirección de la máquina servidora, la máquina a la que conectarnos y hacemos click sobre "connect":
 
 ![VNC](files/VNC/03.png) ![VNC](files/VNC/04.png)
 
