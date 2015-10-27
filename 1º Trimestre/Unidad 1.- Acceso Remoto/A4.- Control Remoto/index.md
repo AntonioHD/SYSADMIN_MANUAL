@@ -28,14 +28,20 @@ En primer lugar, probaremos a realizar la instalación y configuraciónen un má
 el programa "TightVNC", que descargaremos desde su página oficial: [url página oficial](http://www.tightvnc.com/download.php).
 ###2.1.1. Configuración servidor de escritorio remoto
 Una vez descargado el fichero .msi, lo iniciamos y empezamos la instalación:
+
 ![VNC](files/VNC/02.png)
+
 Aprovecharemos que nos da la opción de instalar tanto el software para cliente como para servidor.
+
 ![VNC](files/VNC/03.png)
 
 ###2.1.2. Conexión desde cliente Windows
 Ahora, una vez instalado en el cliente el software para escritorio remoto de "tightVNC", ponemos la dirección de la máquina servidora, la máquina a la que conectarnos y hacemos click sobre "connect":
+
 ![VNC](files/VNC/04.png)
+
 Comprobamos con el comando ```netstat``` (network statistics) para ver las conexiones activas y ver el servicio en funcionamiento:
+
 ![VNC](files/VNC/01.png)
 ***
 
