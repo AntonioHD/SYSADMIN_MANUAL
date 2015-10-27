@@ -3,6 +3,7 @@
 * Antonio Hernández Domínguez
 * Michele Ignacio Linares D'onofrio
 * Miriam Rodríguez Méndez
+
 ***
 
 #1. Introducción
@@ -18,9 +19,13 @@
 ***
 
 #2. Conexión escritorio remoto (VNC)
-
+En éste punto haremos uso del software de escritorio remoto "VNC" (Virtual Network Computing). Lo característico de este programa es que no impone restricciones
+en el sistema operativo del ordenador servidor con respecto al del cliente; por lo que es posible compartir la pantalla de una máquina con cualquier sistema operativo 
+que soporte VNC conectándose desde otro ordenador o dispositivo que disponga de un cliente VNC.
 ***
 ##1. Windows a Windows
+En primer lugar, probaremos a realizar la instalación y configuraciónen un máquinas windows, y accederemos desde otra con el mismo sistema operativo. Para ello, utilizaremos
+el programa "TightVNC", que descargaremos desde su página oficial: [](http://www.tightvnc.com/download.php).
 ###2.1.1. Configuración servidor de escritorio remoto
 ![VNC](files/VNC/02.png)
 ![VNC](files/VNC/03.png)
