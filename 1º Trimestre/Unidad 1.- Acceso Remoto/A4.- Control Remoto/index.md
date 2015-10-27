@@ -96,3 +96,58 @@ Luego, con el comando ```tightvncserver :1 -geometry 800x600 -depth 24```, estab
 ***
 
 #4. Conexión escritorio remoto (Terminal Server)
+
+Con Escritorio remoto es posible establecer hasta dos conexiones remotas simultáneas e
+independientes, además de la propia sesión de la consola del servidor "Windows 2003 Server".
+***
+
+##4.1. Habilitar Escritorio Remoto
+
+En este apartado procederemos a habilitar el Escritorio Remoto en "Windows 2003 Server", de
+modo que permitamos el acceso remoto al equipo "172.18.8.140", que es la IP del servidor, desde otros equipos de la red.
+
+Añadimos dicha característica en roles, agregamos "Servidor de Terminales". Terminal Service puede 
+tener un nombre diferente "Host de Sesión de Escritorio Remoto".
+
+Si deseamos permitir el acceso mediante la conexión a Escritorio Remoto a otros usuarios que
+no sean el propio usuario "Administrador" en la pestaña "Acceso
+Remoto" pulsaremos sobre el botón "Seleccionar usuarios remotos...", pasando a ser mostrada
+la siguiente ventana en la que indicaremos los usuarios a los que deseamos dar acceso. Antes de esto 
+debemos crear dichos usuarios:
+
+![terminalserver](files/TS/usuarios-servidor.png)
+
+Los agregamos al acceso remoto:
+![terminalserver](files/TS//agregar-usuarios.png)
+
+Comprobamos que efectivamente están agregados:
+![terminalserver](files/TS//usuarios-agregados.png)
+***
+
+##4.2. Ejecución del cliente de Escritorio Remoto
+
+En primer lugar accederemos al equipo cliente desde el cual vamos a establecer la conexión,
+un equipo cliente con sistema operativo "Windows 7" en este caso, y desde el
+mismo lanzaremos el cliente de Conexión a Escritorio Remoto.
+
+Al ejecutar el cliente de conexión a Escritorio remoto se mostrará la siguiente ventana, en la
+cual especificaremos la dirección IP o el nombre del equipo al cual nos queremos conectar de modo remoto:
+
+![terminalserver](files/TS/conexion-remota.png)
+
+He utilizado al usuario "Antonio" para establecer esta conexión al escritorio remoto. EJecutando el comando "netstat"
+ aparecen las conexiones:
+ 
+![terminalserver](files/TS/windows-windows-remoto.png)
+
+Por último, conectamos desde un cliente Linux, en nuestro caso Debian 7, utilizando el usuario "michele":
+
+![terminalserver](files/TS//michele.png)
+
+Nos aparece el certificado:
+
+![terminalserver](files/TS/certificado.png)
+
+Comprobamos que ambas máquinas pueden estar conectadas simultáneamente al mismo servidor:
+
+![terminalserver](files/TS/conexion-simultanea.png)
