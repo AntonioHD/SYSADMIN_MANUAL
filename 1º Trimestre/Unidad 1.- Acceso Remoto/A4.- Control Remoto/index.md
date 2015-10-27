@@ -1,41 +1,72 @@
 [!["LOGO"](files/logo.png)](http://blog.iespuertodelacruz.es/)
 ***
-***
+
 #1. Introducción
 
 <p align=justify>
-	En esta actividad hemos ahondado un poco más en la realización de instalaciones "desatendidas", práctica que ya realizamos, pero que en esta ocasión emplearemos un sistema windows en vez de uno GNU/Linux. Con la imagen de un sistema operativo "windows 7 Enterprise" crearemos nuevamente nuestro fichero de control o, en este caso, "archivo de respuesta". En él recogeremos todos los datos que nos interesen para la configuración de nuestro sistema y, posteriormente, lo añadiremos a nuestra imagen iso de instalación.
+	En esta actividad hemos utilizado varias herramientas de escritorio remoto con las que poder controlar los equipos de forma remota, 
+	instalando estos servicios en las máquinas a controlar (máquinas servidoras) y proporcionando las configuraciones necesarias para poder 
+	acceder desde los clientes (controladores) de los mismos. Resulta interesante el funcionamiento de este tipo de software si pensamos en 
+	una gran topología de red en la que converjan miles de equipos y sólo se disponga de un único técnico encargado de todos ellos, se ahorraría 
+	el engorro de realizar tareas de forma local en cada una de esas máquinas por lo que el escritorio remoto le permite tener a sus disposición 
+	todas las máquinas, que tengan instalado previamente dicho software, para ser controladas y gestionadas de forma más eficiente.
 </p>
+***
 
-##1.1.
-<p align=justify>
-</p>
+#2. Conexión escritorio remoto (VNC)
 
-#2.
-<p align=justify>
-	Para realizar la creación de nuestro fichero de respuesta de haremos uso de la herramienta "AIK" de windows. Antes de instalar dicha herramienta, cogeremos nuestra iso del sistema y, con los ficheros extraídos, la situamos en "C:\":
-</p>
+***
+##1. Windows a Windows
+###2.1.1. Configuración servidor de escritorio remoto
+[![VNC](files/VNC/02.png)]
+[![VNC](files/VNC/03.png)]
+[![VNC](files/VNC/04.png)]
+###2.1.2. Conexión desde cliente Windows
+[![VNC](files/VNC/01.png)]
+***
 
-##2.1.
-<p align=justify>
-</p>
+##2.2. Windows a Linux
+###2.2.1. Configuración servidor de escritorio remoto
+[![VNC](files/VNC/05.png)]
+[![VNC](files/VNC/06.png)]
+###2.2.2. Conexión desde cliente Windows
+[![VNC](files/VNC/07.png)]
+[![VNC](files/VNC/08.png)]
+***
 
-#3.
-<p align=justify>
-</p>
+##2.3. Linux a Windows
+###2.3.1. Configuración servidor de escritorio remoto
+[![VNC](files/VNC/02.png)]
+[![VNC](files/VNC/03.png)]
+[![VNC](files/VNC/04.png)]
+###2.3.2. Conexión desde cliente Linux
+[![VNC](files/VNC/09.png)]
+***
 
-##3.1.
-<p align=justify>
-</p>
+##2.4. Linux a Linux
+###2.4.1. Configuración servidor de escritorio remoto
+[![VNC](files/VNC/05.png)]
+[![VNC](files/VNC/06.png)]
+###2.4.2. Conexión desde cliente Linux
+[![VNC](files/VNC/10.png)]
+***
 
-#4.
-<p align=justify>
-</p>
+#3. Conexión escritorio remoto (RDP)
 
-##4.1.
-#5.
-##5.1.
-#6.
-##6.1.
-#7.
-##7.1.
+***
+##3.1. Windows Server a Windows 7 
+###3.1.1. Configuración servidor de escritorio remoto
+###3.1.2. Conexión desde cliente Windows
+***
+
+##3.2. Windows 7 a Linux
+###3.2.1. Configuración servidor de escritorio remoto
+###3.2.2. Conexión desde cliente Windows
+***
+
+##3.3. Linux a Windows 7
+###3.3.1. Configuración servidor de escritorio remoto
+###3.3.2. Conexión desde cliente Linux
+***
+
+#4. Conexión escritorio remoto (Terminal Server)
