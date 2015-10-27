@@ -111,9 +111,11 @@ Si deseamos permitir el acceso mediante la conexión a Escritorio Remoto a otros
 ![terminalserver](files/TS/usuarios-servidor.png)
 
 Los agregamos al acceso remoto:
+
 ![terminalserver](files/TS//agregar-usuarios.png)
 
 Comprobamos que efectivamente están agregados:
+
 ![terminalserver](files/TS//usuarios-agregados.png)
 ***
 
