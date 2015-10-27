@@ -172,7 +172,7 @@ Nos aparecerá a continuación una ventana con los datos de la conexión:
 
 ![RDP](files/RDP/06b.png)
 
-Una vez que termina el proceso de conexión nos aparecerá la ventana con el escritorio remoto de la máquina linux. Para cabar, comprobamos con el comando "netstat" que efectivamente servicio que posibilita la conexión está en funcionamiento:
+Una vez que termina el proceso de conexión nos aparecerá la ventana con el escritorio remoto de la máquina linux. Para acabar, comprobamos con el comando "netstat" que efectivamente servicio que posibilita la conexión está en funcionamiento:
 
 ![RDP](files/RDP/08.png)
 
