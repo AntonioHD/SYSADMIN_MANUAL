@@ -11,7 +11,7 @@
 
 #1. Introducción
 
-Para ésta práctica, y siguiendo conn la temática marcada por esta unidad (el "acceso remoto"), hemos empleado en esta ocasión una nueva herramienta que nos ayudará a establecer una conexión remota "segura"; siendo así una opción relativamente más completa con respecto a otras que podamos llegar a emplear (véase "Telnet"). Por ello, nos conectaremos vía SSH ("Secure SHell", en español "intérprete de órdenes seguro") a otra máquina, y veremos cómo podemos hacer uso de aplicaciones empleando dicho protocolo, y cómo podemos limitar o establecer parámetros de seguridad para los usuarios que usemos en las comunicaciones de SSH.
+Para ésta práctica, y siguiendo con la temática marcada por esta unidad (el "acceso remoto"), hemos empleado en esta ocasión una nueva herramienta que nos ayudará a establecer una conexión remota "segura"; siendo así una opción relativamente más completa con respecto a otras que podamos llegar a emplear (véase "Telnet"). Por ello, nos conectaremos vía SSH ("Secure SHell", en español "intérprete de órdenes seguro") a otra máquina, y veremos cómo podemos hacer uso de aplicaciones empleando dicho protocolo, y cómo podemos limitar o establecer parámetros de seguridad para los usuarios que usemos en las comunicaciones de SSH.
 
 Para la práctica emplearemos una máquina servidor con sistema operativo GNU/Linux, distribución OpenSUSE, una máquina cliente con sistema operativo Windows 7 y otra máquina cliente también con OpenSUSE como sistema.
 
