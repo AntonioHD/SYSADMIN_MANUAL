@@ -1,10 +1,12 @@
 #A6.- ESCRITORIO REMOTO CON SSH
 
 ***
+
 * Autor: Antonio Hernández Domínguez
 * Curso: 2º ASIR 2015/2016
 * Asignatura: Administración de Sistemas Operativos
 * Unidad: 1.- "Acceso Remoto"
+
 ***
 
 #1. Introducción
