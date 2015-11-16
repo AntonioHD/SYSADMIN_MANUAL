@@ -1,6 +1,0 @@
-antoniio:hernandez:antoniohda@gmail.com:09/05/1992:add
-alejandro:hernandez:alejandrohd1@live.com:09/05/1992:add
-francisco:garcia:franciso@gmail.com:04/08/1672:delete
-almudena:mendez:almudena@gmail.com:03/12/1901:delete
-peter:griffin::23/02/1653:add
-stewie:griffin::24/01/1992:add
