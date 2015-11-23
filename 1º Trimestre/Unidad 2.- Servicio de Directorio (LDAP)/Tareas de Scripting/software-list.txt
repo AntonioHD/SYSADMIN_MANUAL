@@ -1,0 +1,4 @@
+geany:remove
+dpkg:r
+gimp:i
+brasero:install
