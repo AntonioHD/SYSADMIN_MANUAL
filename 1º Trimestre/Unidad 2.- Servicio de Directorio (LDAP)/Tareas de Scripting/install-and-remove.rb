@@ -32,7 +32,6 @@ list.each do |softwarename|
 
 	#Si se especifica eliminarlo, comprobamos primero si está instalado	
 	if fields[1]=="remove" || fields[1]=="r"
-	
 		if search=="" then
 			puts "El programa "+fields[0]+" no está instalado"			
 		else
