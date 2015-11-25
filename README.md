@@ -12,9 +12,7 @@
 
 ###Servidor GIT en Internet:
 * Crear una cuenta en GitHub.
-* Crear un repositorio "curso-nombre-del-alumno". Por ejemplo, si el alumno se llama David Vargas, 
-nombrar el repositorio como add1516-david-vargas. En minúsculas y usando los guiones (-).
-
+* Crear un repositorio.
 > [OJO] Marcar la opción "Initialize this repository with a README", para crear un repositorio que contenga al menos un fichero.
 > La creación del repositorio en GitHub, sólo hay que hacerla una vez.
 
