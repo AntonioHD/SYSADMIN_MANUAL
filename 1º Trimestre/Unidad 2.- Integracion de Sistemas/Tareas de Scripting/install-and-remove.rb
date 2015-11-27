@@ -32,8 +32,7 @@ list.each do |softwarename|
 
 	#Si se especifica eliminarlo, comprobamos primero si está instalado	
 	if fields[1]=="remove" || fields[1]=="r"
-	
-		if search=="" then
+		if search.count="" then
 			puts "El programa "+fields[0]+" no está instalado"			
 		else
 			puts "El programa "+fields[0]+" está instalado, procedemos a desinstalarlo"
@@ -41,7 +40,7 @@ list.each do |softwarename|
 		end
 	#si se especifica instalarlo, comprobamos que NO está instalado
 	elsif fields[1]=="install" || fields[1]=="i" then
-		if search=="" then
+		if search.count="" then
 			puts "El programa "+fields[0]+" NO está instalado, procedemos a instalarlo"
 			system("zypper --non-interactive in #{fields[0]}")
 		else

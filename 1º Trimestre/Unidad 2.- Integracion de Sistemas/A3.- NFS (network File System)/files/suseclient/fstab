@@ -1,0 +1,19 @@
+UUID=d4068100-d4e9-402a-b330-23626b513fc1 swap                 swap       defaults              0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /                    btrfs      defaults              0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /boot/grub2/i386-pc  btrfs      subvol=boot/grub2/i386-pc 0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /boot/grub2/x86_64-efi btrfs      subvol=boot/grub2/x86_64-efi 0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /home                btrfs      subvol=home           0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /opt                 btrfs      subvol=opt            0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /srv                 btrfs      subvol=srv            0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /tmp                 btrfs      subvol=tmp            0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /usr/local           btrfs      subvol=usr/local      0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/crash           btrfs      subvol=var/crash      0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/lib/mailman     btrfs      subvol=var/lib/mailman 0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/lib/named       btrfs      subvol=var/lib/named  0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/lib/pgsql       btrfs      subvol=var/lib/pgsql  0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/log             btrfs      subvol=var/log        0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/opt             btrfs      subvol=var/opt        0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/spool           btrfs      subvol=var/spool      0 0
+UUID=a735fb58-1940-4060-978d-64ddccc4e75b /var/tmp             btrfs      subvol=var/tmp        0 0
+172.18.9.52:/var/export/public	/mnt/remoto/public	nfs	defaults,auto,rw
+172.18.9.52:/var/export/private /mnt/remoto/private	nfs	defaults,auto,r	
