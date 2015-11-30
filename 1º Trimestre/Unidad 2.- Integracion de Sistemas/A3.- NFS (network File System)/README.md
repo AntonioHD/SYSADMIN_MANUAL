@@ -9,7 +9,6 @@
 
 ***
 
-
 ## 1. Introducción
 
 En esta tarea se ha hecho uso de otro "sistema de archivos distribuido" o "sistema de archivos de red"; en concreto, el proporcionado por el protocolo NFS (Network File System). El cual funciona a nivel de aplicación en el modelo OSI y suele ser el sistema de archivos de red que viene incluido por defecto en los Sistemas Operativos con kernel "Unix" o similar a "Unix", "Linux".
@@ -42,6 +41,36 @@ El desarrollo de la práctica, junto con la documentación de la misma, se ha ll
 
 ### 2.1 Servidor NFS Windows
 
+* Configuración de red del Windows 2008 Server (Enterprise):
+
+![](files/windowsserver/01.png)
+
+Después de configurar los parámetros de red de nuestro servidor, vamos a proceder a la insrtalación del servicio NFS. Para ello, accedemos a `Administrador del servidor -> Roles y características (en caso de W2008S se denominan funciones) -> Servicios de Archivo -> Servicios para NFS` 
+
+![](files/windowsserver/02.png)
+![](files/windowsserver/03.png)
+
+A continuación, vamos a configurar el servidor NFS:
+
+* Creamos las carpetas `C:\export\public` y `C:\export\private`:
+
+![](files/windowsserver/04.png)
+
+* Accedemos a `Propiedades de la carpeta public -> Compartir NFS` y la configuramos para que sea accesible desde la red en modo lectura/escritura con NFS.
+
+![](files/windowsserver/05.png)
+![](files/windowsserver/06.png)
+
+* Accedemos a `Propiedades de la carpeta private -> Compartir NFS` y la configuramos para que sea accesible desde la red en modo solamente en modo lectura con NFS.
+
+
+![](files/windowsserver/07.png)
+![](files/windowsserver/08.png)
+
+Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que todo ha ido correctamente y los recursos están compartidos.
+
+![](files/windowsserver/09.png)
+
 ### 2.2 Cliente NFS Windows
 
 ![](files/cwnfs/00.png)
@@ -72,7 +101,23 @@ El desarrollo de la práctica, junto con la documentación de la misma, se ha ll
 
 ### 3.2 Cliente NFS OpenSUSE
 
+![](files/suseclient/10.png)
+![](files/suseclient/11.png)
+![](files/suseclient/12.png)
+![](files/suseclient/13.png)
+![](files/suseclient/14.png)
+![](files/suseclient/15.png)
+![](files/suseclient/16.png)
+![](files/suseclient/17.png)
+![](files/suseclient/18.png)
+![](files/suseclient/19.png)
+![](files/suseclient/20.png)
+![](files/suseclient/21.png)
+
+
 ### 3.3 Montaje automático
+
+![](files/suseclient/22.png)
 
 ## 4. Preguntas finales
 
