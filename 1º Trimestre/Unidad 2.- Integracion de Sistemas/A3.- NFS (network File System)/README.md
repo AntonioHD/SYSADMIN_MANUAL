@@ -88,13 +88,53 @@ Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que
 
 ### 3.1 Servidor NFS OpenSUSE
 
+En este apartado veremos los procesos que tenemos que seguir para implementar un servidor NFS en una máquina GNU/Linux. Realizaremos dicha implementación sobre un sistema operativo OpenSUSE.
+
+Comenzamos editando el fichero ```/etc/hosts``` para agrear los nombres de los hosts de las máquinas clientes y del servidor. En este caso será:
+
+*Para el cliente GNU/Linux, el nombre ```nfs-client-07.perez``` con dirección IPv4 ```172.18.7.62```.
+*Para el servidor ```nfs-server-09.hernandez``` con dirección IPv4 ```172.18.9.52```.
+
 ![](files/susenfs/nfs00.png)
+
+Luego, editamos las interfaces de red de manera que tenga la ip especificada:
+
 ![](files/susenfs/nfs01.png)
+
+Lanzamos el comando ```sudo zypper --non-interactive install yast2-nfs-server``` para instalar el paquete NFS en nuestro sistema:
+
 ![](files/susenfs/nfs02.png)
+
+Ahora, una vez instalado nuestro servidor NFS, lo iniciamos desde la herramienta panel de control "YaST". Estableceremos que se inicie dicho servicio con el arranque del sistema, y abriremos el puerto en el cortafuegos para permitir el tráfico de este protocolo:
+
 ![](files/susenfs/nfs03.png)
+
+En este punto vamos a crear las carpetas físicas que asociaremos a los recursos que vamos a publicar en nuestro servidor NFS. Crearemos dos carpetas para comparar los permisos que posteriormente daremos desde el servidor nfs, la ruta será:
+```/var/export/public``` y ```/var/export/private```:
+
 ![](files/susenfs/nfs04.png)
+
+Los propietarios de las carpetas, así como los permisos asignados atenderán al siguiente esquema:
+
+* La carpeta ```public``` no tendrá propietario "nobody" y pertenecerá a ningún grupo "nogroup". 
+* La carpeta ```private``` tampoco tendrá propietario, y no estará asociado a algún grupo. Los permisos que tendrá serán:	
+ * De Lectura, Escritura y Ejecución para el propietario (7__)
+ * De Lectura, Escritura y Ejecución para el grupo (_7_)
+ * Y ningúno para el resto de usuarios (__0)
+
 ![](files/susenfs/nfs04b.png)
+
+Volviendo al servidor NFS, vamos a publicar las carpetas que hemos creado. Para ello, hacemos click en "Añadir directorio" y ponemos la ruta física de la carpeta. Luego, en la ventana inferior hacemos click en "añadir host", para añadir a esa carpeta los host permitidos (los que tendrán acceso) y con los permisos (opciones) que queramos.
+Para la carpeta "public" vamos a poner a cualquier host (*) con los permisos de lectura y escritura.
+
+*/var/export/public ```* rw,siync,subtree_check```:
+
 ![](files/susenfs/nfs05.png)
+
+Y para el recurso "private" establecemos que el host sea la máquina cliente (nfs-client-07.perez``` dirección IPv4 ```172.18.7.62```) y los permisos serán sólo de lectura:
+
+*/var/export/private ```* ro,siync,subtree_check```:
+
 ![](files/susenfs/nfs06.png)
 ![](files/susenfs/nfs07.png)
 ![](files/susenfs/nfs08.png)
