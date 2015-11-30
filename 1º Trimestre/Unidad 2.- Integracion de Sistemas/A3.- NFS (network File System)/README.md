@@ -123,6 +123,8 @@ Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que
 
 ### 4.1. Cliente GNU/Linux y Servidor Windows (NFS)
 
+![](files/suseclient/23.png)
+
 ### 4.2. Cliente Windows y Servidor GNU/Linux (NFS)
 
 ![](files/cwnfssuse/00.png)
