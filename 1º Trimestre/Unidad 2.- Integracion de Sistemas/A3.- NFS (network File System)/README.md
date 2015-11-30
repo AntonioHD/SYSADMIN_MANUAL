@@ -141,19 +141,57 @@ Y para el recurso "private" establecemos que el host sea la máquina cliente (nf
 
 ### 3.2 Cliente NFS OpenSUSE
 
-![](files/suseclient/10.png)
-![](files/suseclient/11.png)
-![](files/suseclient/12.png)
-![](files/suseclient/13.png)
-![](files/suseclient/14.png)
-![](files/suseclient/15.png)
-![](files/suseclient/16.png)
-![](files/suseclient/17.png)
-![](files/suseclient/18.png)
-![](files/suseclient/19.png)
-![](files/suseclient/20.png)
-![](files/suseclient/21.png)
+* Configuración de red del cliente OpenSuse:
 
+![](files/suseclient/10.png)
+
+* Configuración del fichero /etc/hosts (añadimos las líneas correspondientes al servidor y cliente)
+
+![](files/suseclient/11.png)
+
+En esta parte, comprobaremos que las carpetas compratidas desde el servidor son accesibles desde el cliente. El software del cliente NFS ya viene instalado en OpenSuse así que procederemos a realizar algunas comprobaciones para ver que todo funciona correctamente antes de montar los recursos.
+
+Vamos a comprobar la conectividad entre el cliente y el servidor:
+
+* Realizamos un ping al servidor para comprobar la conectividad: `ping 172.18.9.52`
+
+![](files/suseclient/12.png)
+
+* Realizamos un nmap para escanear que servicios se están ofreciendo al exterior: `nmap 172.18.9.52 -Pn`
+
+![](files/suseclient/14.png)
+
+* Realizamos un showmount para mostrar la lista de recursos exportados por el servidor NFS: `showmount -e 172.18.9.52`
+
+![](files/suseclient/15.png)
+
+Una vez realizadas estas comprobaciones, vamos a montar y usar cada recurso compartido.
+
+* Creamos la carpeta `/mnt/remoto/public` y montamos el recurso:
+
+![](files/suseclient/13.png)
+
+![](files/suseclient/16.png)
+
+Utilizamos el comando `df -hT` para comprobar que se ha montado el recurso:
+
+![](files/suseclient/17.png)
+
+* Creamos la carpeta `/mnt/remoto/private` y montamos el recurso:
+
+![](files/suseclient/18.png)
+
+Ahora comprobamos que desde el cliente, no puedo crear escribir dentro de private (sólo lectura) pero si de public (lectura y escritura):
+
+![](files/suseclient/19.png)
+
+Para terminar las comprobaciones, mi compañero ha creado un archivo en la carpeta private en el servidor para comprobar que desde el cliente no puedo escribir dentro.
+
+![](files/suseclient/20.png)
+
+Y efectivamente, no me deja guardar la línea que he escrito dentro del fichero, por lo tanto, todo ha funcionado correctamente.
+
+![](files/suseclient/21.png)
 
 ### 3.3 Montaje automático
 
