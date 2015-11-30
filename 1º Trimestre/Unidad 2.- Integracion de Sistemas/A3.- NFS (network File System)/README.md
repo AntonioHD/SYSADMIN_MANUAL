@@ -2,10 +2,10 @@
 
 ***
 
-* Componentes: Antonio Hernández Domínguez - Manuel Pérez Acosta
-* Curso: 2º ASIR 2015/2016
-* Asignatura: Administración de Sistemas Operativos
-* Unidad: 2.- Integración de Sistemas
+* **Componentes:**  Antonio Hernández Domínguez - Manuel Pérez Acosta
+* **Curso:** 2.º ASIR 2015/2016
+* **Asignatura:** Administración de Sistemas Operativos
+* **Unidad:** 2.ª Integración de Sistemas
 
 ***
 
@@ -45,7 +45,7 @@ El desarrollo de la práctica, junto con la documentación de la misma, se ha ll
 
 ![](files/windowsserver/01.png)
 
-Después de configurar los parámetros de red de nuestro servidor, vamos a proceder a la insrtalación del servicio NFS. Para ello, accedemos a `Administrador del servidor -> Roles y características (en caso de W2008S se denominan funciones) -> Servicios de Archivo -> Servicios para NFS` 
+Después de configurar los parámetros de red de nuestro servidor, vamos a proceder a la instalación del servicio NFS. Para ello, accedemos a `Administrador del servidor -> Roles y características (en caso de W2008S se denominan funciones) -> Servicios de Archivo -> Servicios para NFS` 
 
 ![](files/windowsserver/02.png)
 ![](files/windowsserver/03.png)
@@ -86,14 +86,14 @@ Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que
 
 ## 3. Sistema Operativo GNU/Linux (OpenSuse)
 
+En este punto se documentan los pasos a seguir para implementar un servidor NFS en un sistema operativo GNU/Linux, distribución OpenSUSE; y las comprobaciones de uso de dicho servidor desde un cliente con mismo sistema operativo.
+
 ### 3.1 Servidor NFS OpenSUSE
 
-En este apartado veremos los procesos que tenemos que seguir para implementar un servidor NFS en una máquina GNU/Linux. Realizaremos dicha implementación sobre un sistema operativo OpenSUSE.
+Comenzamos editando el fichero `/etc/hosts` para agrear los nombres de los hosts de las máquinas clientes y del servidor. En este caso será:
 
-Comenzamos editando el fichero ```/etc/hosts``` para agrear los nombres de los hosts de las máquinas clientes y del servidor. En este caso será:
-
-*Para el cliente GNU/Linux, el nombre ```nfs-client-07.perez``` con dirección IPv4 ```172.18.7.62```.
-*Para el servidor ```nfs-server-09.hernandez``` con dirección IPv4 ```172.18.9.52```.
+*Para el cliente GNU/Linux, el nombre `nfs-client-07.perez` con dirección IPv4 `172.18.7.62`.
+*Para el servidor `nfs-server-09.hernandez` con dirección IPv4 `172.18.9.52`.
 
 ![](files/susenfs/nfs00.png)
 
@@ -125,18 +125,26 @@ Los propietarios de las carpetas, así como los permisos asignados atenderán al
 ![](files/susenfs/nfs04b.png)
 
 Volviendo al servidor NFS, vamos a publicar las carpetas que hemos creado. Para ello, hacemos click en "Añadir directorio" y ponemos la ruta física de la carpeta. Luego, en la ventana inferior hacemos click en "añadir host", para añadir a esa carpeta los host permitidos (los que tendrán acceso) y con los permisos (opciones) que queramos.
-Para la carpeta "public" vamos a poner a cualquier host (*) con los permisos de lectura y escritura.
 
-*/var/export/public ```* rw,siync,subtree_check```:
+Para la carpeta "public" vamos a poner a cualquier host (*) con los permisos de lectura y escritura, de manera que sea accesible desde toda la red con dichos permisos.
+
+* **/var/export/public** --> `* rw,siync,subtree_check`:
 
 ![](files/susenfs/nfs05.png)
 
-Y para el recurso "private" establecemos que el host sea la máquina cliente (nfs-client-07.perez``` dirección IPv4 ```172.18.7.62```) y los permisos serán sólo de lectura:
 
-*/var/export/private ```* ro,siync,subtree_check```:
+
+La carpeta /var/export/private, sea accesible sólo desde la IP del cliente, y sólo en modo lectura. De manera que, establecemos el host cliente `nfs-client-07.perez` mediante su ip `172.18.7.62` y los permisos, que hemos dicho que serán sólo de lectura:
+
+* **/var/export/private** --> `172.18.7.62/32 ro,siync,subtree_check`:
 
 ![](files/susenfs/nfs06.png)
+
+Si hacemos un `more` de la carpeta `/etc/exports` podemos ver los parámetros establecidos:
+
 ![](files/susenfs/nfs07.png)
+
+Para acabar, comprobamos que el servicio está en funcionamiento lanzando el comando `sudo systemctl status nfsserver.service`. A su vez, lanzamos el comando `sudo showmount -e localhost` para ver los directorios que hemos publicado:
 ![](files/susenfs/nfs08.png)
 
 ### 3.2 Cliente NFS OpenSUSE
@@ -149,19 +157,19 @@ Y para el recurso "private" establecemos que el host sea la máquina cliente (nf
 
 ![](files/suseclient/11.png)
 
-En esta parte, comprobaremos que las carpetas compratidas desde el servidor son accesibles desde el cliente. El software del cliente NFS ya viene instalado en OpenSuse así que procederemos a realizar algunas comprobaciones para ver que todo funciona correctamente antes de montar los recursos.
+En esta parte, comprobaremos que las carpetas compartidas desde el servidor son accesibles desde el cliente. El software del cliente NFS ya viene instalado en OpenSuse así que procederemos a realizar algunas comprobaciones para ver que todo funciona correctamente antes de montar los recursos.
 
-Vamos a comprobar la conectividad entre el cliente y el servidor:
+Vamos a comprobar la conectividad entre el cliente y el servidor.
 
-* Realizamos un ping al servidor para comprobar la conectividad: `ping 172.18.9.52`
+* Realizamos un ping al servidor para comprobar la conectividad `ping 172.18.9.52`:
 
 ![](files/suseclient/12.png)
 
-* Realizamos un nmap para escanear que servicios se están ofreciendo al exterior: `nmap 172.18.9.52 -Pn`
+* Realizamos un nmap para escanear que servicios se están ofreciendo al exterior `nmap 172.18.9.52 -Pn`:
 
 ![](files/suseclient/14.png)
 
-* Realizamos un showmount para mostrar la lista de recursos exportados por el servidor NFS: `showmount -e 172.18.9.52`
+* Realizamos un showmount para mostrar la lista de recursos exportados por el servidor NFS `showmount -e 172.18.9.52`:
 
 ![](files/suseclient/15.png)
 
@@ -185,11 +193,11 @@ Ahora comprobamos que desde el cliente, no puedo crear escribir dentro de privat
 
 ![](files/suseclient/19.png)
 
-Para terminar las comprobaciones, mi compañero ha creado un archivo en la carpeta private en el servidor para comprobar que desde el cliente no puedo escribir dentro.
+Para terminar las comprobaciones, mi compañero ha creado un archivo en la carpeta private en el servidor para comprobar que desde el cliente no puedo escribir dentro:
 
 ![](files/suseclient/20.png)
 
-Y efectivamente, no me deja guardar la línea que he escrito dentro del fichero, por lo tanto, todo ha funcionado correctamente.
+Y efectivamente, no me deja guardar la línea que he escrito dentro del fichero, por lo tanto, todo ha funcionado correctamente:
 
 ![](files/suseclient/21.png)
 
@@ -199,13 +207,35 @@ Y efectivamente, no me deja guardar la línea que he escrito dentro del fichero,
 
 ## 4. Preguntas finales
 
+En este apartado, y a modo de desenlace para este documento, se han planteado diversas cuestiones a atender ya que hemos visto cómo podemos hacer uso de los servicios NFS en un sistema windows y en un sistema GNU/Linux, de forma independiente. 
+
+La cuestión ahora es: 
+
+* ¿Se puede integrar un sistema NFS empleando como servidor una máquina Windows y como cliente una GNU/Linux?
+
+* ¿y a la inversa, un servidor NFS Linux junto con clientes Windows?
+
 ### 4.1. Cliente GNU/Linux y Servidor Windows (NFS)
+
+Veamos primero el caso servidor Windows de NFS y cliente GNU/Linux.
+
 
 ![](files/suseclient/23.png)
 
 ### 4.2. Cliente Windows y Servidor GNU/Linux (NFS)
 
+Por último, probaremos a conectarnos con un cliente Windows al Servidor GNU/Linux que habíamos configurado en puntos anteriores.
+
+Mostramos primero los recursos que están publicados por el servidor mediante el NFS. Para ello lanzamos el comando `showmount -e <ip_del_servidor>` --> `172.18.9.52`. Comprobamos que las carpetas "public" y "private" están disponibles para la red.
+
+Nuevamente, haciendo uso del comando `mount -o anon,nolock,r,cassesensitive`, la ip, la ruta de la carpeta y la letra que queremos asignarle al recurso (podemos poner *), montamos la misma en nuestro sistema:
+
+* `mount -o anon,nolock,r,cassesensitive 172.18.9.52:/var/export/private/ *`
+* `mount -o anon,cassesensitive 172.18.9.52:/var/export/public/ *`
+
 ![](files/cwnfssuse/00.png)
+
+![](files/cwnfssuse/00b.png)
 
 nota: Se ha cambiado la ruta (\\//) de acceso a los recursos, diferencia con respecto al caso de windows a windows.
 
