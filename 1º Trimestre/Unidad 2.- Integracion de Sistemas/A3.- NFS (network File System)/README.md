@@ -211,7 +211,7 @@ En este apartado, y a modo de desenlace para este documento, se han planteado di
 
 La cuestión ahora es: 
 
-* ¿Se puede integrar un sistema NFS empleando como servidor una máquina Windows y como cliente una GNU/Linux?
+* ¿Se puede integrar un sistema NFS empleando como servidor una máquina Windows y como cliente de ésta una máquina GNU/Linux?
 
 * ¿y a la inversa, un servidor NFS Linux junto con clientes Windows?
 
@@ -235,14 +235,31 @@ Nuevamente, haciendo uso del comando `mount -o anon,nolock,r,cassesensitive`, la
 
 ![](files/cwnfssuse/00.png)
 
+La gran diferencia con respecto a la conexión (con este cliente Windows) al servidor NFS Windows es que, para poder realizar la conexión con el servidor GNU/Linux, se ha cambiado la "sintaxis" a la hora de especificar la ruta de los recursos. En la siguiente imagen podemos apreciar que para conectarnos al servidor Windows poníamos la ruta --> `\\ip del servidor\carpeta` y para éste caso, al conectarnos al servidor NFS de la máquina OpenSUSE --> `ipdelservidor:/ruta/de/la/carpeta`:
+
 ![](files/cwnfssuse/00b.png)
 
-nota: Se ha cambiado la ruta (\\//) de acceso a los recursos, diferencia con respecto al caso de windows a windows.
+Desde las "ubicaciones de red" de nuestro sistema vemos que se han montado los directorios de forma correcta:
 
 ![](files/cwnfssuse/01.png)
+
+Volvemos a comprobar los permisos tratando de escribir algún fichero (en la carpeta public):
+
 ![](files/cwnfssuse/02.png)
+
+Y los permisos para la carpeta "private" (permisos sólo de lectura):
+
 ![](files/cwnfssuse/03.png)
+
+Si hacemos click con botón derecho sobre el fichero que hemos creado desde el cliente en la carpeta public vemos, en "propiedades", los modos de permisos que tiene. Para este caso hemos comprobado que podemos editar dichos permisos:
+
 ![](files/cwnfssuse/04.png)
+
+Revisamos las propiedades ahora del fichero que podemos ver (no editar) en la carpeta "private":
+
 ![](files/cwnfssuse/05.png)
+
+Comprobamos que tampoco podemos cambiar los modos de permiso de éste:
+
 ![](files/cwnfssuse/06.png)
 
