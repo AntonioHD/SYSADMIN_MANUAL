@@ -25,13 +25,13 @@ En este documento se recogen todos los pasos a seguir para implementar dicho sis
 
 El desarrollo de la práctica, junto con la documentación de la misma, se ha llevado a cabo de forma conjunta por los alumnos Antonio Hernández Domínguez y Manuel Pérez Acosta. Tratando de organizar y optimizar el tiempo de realización de esta tarea, se han repartido los pasos a seguir de manera que no se excluyera a ningún integrante de la necesidad de conocer el funcionamiento del protocolo NFS en cada sistema, quedando como resultado el siguiente reparto:
 
-* Antonio Hernández Domínguez:
+* **Antonio Hernández Domínguez:**
 
  * Servidor NFS GNU/Linux OpenSUSE.
  * Cliente NFS Windows, para conectarnos al servidor NFS Windows.
  * Cliente NFS Windows, para conectarnos al servidor NFS GNU/Linux OpenSUSE.
 
-* Manuel Pérez Acosta:
+* **Manuel Pérez Acosta:**
 
  * Servidor NFS Windows 7 Enterprise.
  * Cliente NFS GNU/Linux, para conectarnos al servidor NFS GNU/Linux OpenSUSE. 
