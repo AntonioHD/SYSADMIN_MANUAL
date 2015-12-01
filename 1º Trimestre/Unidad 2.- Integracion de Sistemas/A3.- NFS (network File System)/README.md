@@ -73,15 +73,48 @@ Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que
 
 ### 2.2 Cliente NFS Windows
 
+Ahora, vamos a realizar las comprobaciones desde un cliente Windows, conectandonos al servidor NFS.
+
+Nos aseguramos primero de configurar el nombre de host y la dirección IPv4, de forma correcta. Host `Hernandez-09-wc` y con ip `172.18.9.12`:
+
 ![](files/cwnfs/00.png)
 ![](files/cwnfs/00b.png)
+
+Para que podamos hacer uso de los servicios de NFS tenemos que activar, dentro de las características de Windows, la característica "Servicios para NFS"-->"Cliente para NFS". Para ello, nos situamos en "Programas y características" y hacemos click en "Activar o desactivar las características de Windows":
+
 ![](files/cwnfs/01.png)
+
+Iniciamos el intérprete de comandos de windows como administradores y lanzamos el comando `nfsadmin client start` para iniciar los servicios de NFS:
+
 ![](files/cwnfs/02.png)
+
+Con `showmount -e 172.18.7.22` mostramos los recursos publicados por el servidor a la red. Y con el comando `mount -o anon,nolock,r,casesensitive \\172.18.7.22\public *` montamos los recursos en la máquina cliente. Este comando se compone principalmente de 3 partes:
+
+* Una primera a modo de encabezado `mount -o` que es la orden que monta el directorio.
+* Una segunda o intermedia `anon,nolock,r,casesensitive` que conforma los modos de permiso del recurso que vamos a montar.
+* Y una última parte `\\172.18.7.22\public *` en la que se especifica la dirección ip del directorio que queremos montar junto con su ruta física y, al final, una letra con la que queremos identificar dicho montaje (en este caso * para que coja la letra siguiente disponibleen el equipo).
+
 ![](files/cwnfs/03.png)
+
+Comprobamos que los recursos se han montado correctamente haciéndo uso del comando `net use`:
+
 ![](files/cwnfs/04.png)
+
+En "ubicaciones de red" podemos ver que efectivamente aparecen los directorios que hemos montado:
+
 ![](files/cwnfs/05.png)
+
+Vamos ahora a comprobar los modos de permiso que les hemos asignado a cada directorio, para ello tratamos de crear una carpeta o fichero dentro del recurso "public". Vemos que sí se nos permite escribir dentro del recurso:
+
 ![](files/cwnfs/06.png)
+
+Hacemos lo mismo para la carpeta "private" y vemos que en esta ocasión no podemos escribir pero sí "leer" el contenido del recurso:
+
 ![](files/cwnfs/07.png)
+
+
+Con el comando `unmount` y la letra asignada al recurso que queremos desmontar, desconectamos la máquina cliente de dicho directorio:
+
 ![](files/cwnfs/08.png)
 
 ## 3. Sistema Operativo GNU/Linux (OpenSuse)
