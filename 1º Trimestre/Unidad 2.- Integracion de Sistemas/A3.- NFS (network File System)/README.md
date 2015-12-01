@@ -219,8 +219,11 @@ La cuestión ahora es:
 
 Veamos primero el caso servidor Windows de NFS y cliente GNU/Linux.
 
+* En este apartado, montamos los recursos NFS del servidor Windows en el cliente OpenSuse y comprobamos dichos recursos montados:
 
 ![](files/suseclient/23.png)
+
+> Como vemos en la imagen, no podemos acceder a los recursos por un problema de conversión entre los dos sistemas operativos.
 
 ### 4.2. Cliente Windows y Servidor GNU/Linux (NFS)
 
