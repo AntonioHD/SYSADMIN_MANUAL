@@ -15,13 +15,13 @@ En esta tarea se ha hecho uso de otro "sistema de archivos distribuido" o "siste
 
 En este documento se recogen todos los pasos a seguir para implementar dicho sistema de archivos distribuido tanto en una máquina con sistema operativo Windows como en una con sistema GNU/Linux. A su vez, se ha hecho uso de clientes windows y GNU/Linux para ambos casos, esto es:
 
-1. Un servidor NFS Windows (Windows 7 Enterprise) al que nos conectamos con un Cliente Windows.
+1. Un servidor NFS Windows (Windows 2008 Server Enterprise) al que nos conectamos con un Cliente Windows.
 
 2. Un servidor NFS Linux (OpenSUSE) al que nos conectamos con un cliente Linux.
 
 3. Comprobamos el acceso con cliente Linux al servidor NFS Windows.
 
-4. Comprobamos el acceso con cliente windows al servidor NFS Linux.
+4. Comprobamos el acceso con cliente Windows al servidor NFS Linux.
 
 El desarrollo de la práctica, junto con la documentación de la misma, se ha llevado a cabo de forma conjunta por los alumnos Antonio Hernández Domínguez y Manuel Pérez Acosta. Tratando de organizar y optimizar el tiempo de realización de esta tarea, se han repartido los pasos a seguir de manera que no se excluyera a ningún integrante de la necesidad de conocer el funcionamiento del protocolo NFS en cada sistema, quedando como resultado el siguiente reparto:
 
@@ -33,7 +33,7 @@ El desarrollo de la práctica, junto con la documentación de la misma, se ha ll
 
 * **Manuel Pérez Acosta:**
 
- * Servidor NFS Windows 7 Enterprise.
+ * Servidor NFS Windows 2008 Server Enterprise.
  * Cliente NFS GNU/Linux, para conectarnos al servidor NFS GNU/Linux OpenSUSE. 
  * Cliente NFS GNU/Linux, para conectarnos al servidor NFS Windows.
 
@@ -45,7 +45,7 @@ El desarrollo de la práctica, junto con la documentación de la misma, se ha ll
 
 ![](files/windowsserver/01.png)
 
-Después de configurar los parámetros de red de nuestro servidor, vamos a proceder a la instalación del servicio NFS. Para ello, accedemos a `Administrador del servidor -> Roles y características (en caso de W2008S se denominan funciones) -> Servicios de Archivo -> Servicios para NFS` 
+Después de configurar los parámetros de red de nuestro servidor, vamos a proceder a la instalación del servicio NFS. Para ello, accedemos a `Administrador del servidor -> Roles y características (en caso de W2008S se denominan funciones) -> Servicios de Archivo -> Servicios para NFS`.
 
 ![](files/windowsserver/02.png)
 ![](files/windowsserver/03.png)
@@ -61,7 +61,7 @@ A continuación, vamos a configurar el servidor NFS:
 ![](files/windowsserver/05.png)
 ![](files/windowsserver/06.png)
 
-* Accedemos a `Propiedades de la carpeta private -> Compartir NFS` y la configuramos para que sea accesible desde la red en modo solamente en modo lectura con NFS.
+* Accedemos a `Propiedades de la carpeta private -> Compartir NFS` y la configuramos para que sea accesible desde la red en modo de sólo lectura con NFS.
 
 
 ![](files/windowsserver/07.png)
@@ -125,10 +125,11 @@ En este punto se documentan los pasos a seguir para implementar un servidor NFS 
 
 ### 3.1 Servidor NFS OpenSUSE
 
-Comenzamos editando el fichero `/etc/hosts` para agrear los nombres de los hosts de las máquinas clientes y del servidor. En este caso será:
+Comenzamos editando el fichero `/etc/hosts` para agregar los nombres de los hosts de las máquinas clientes y del servidor. En este caso será:
 
-*Para el cliente GNU/Linux, el nombre `nfs-client-07.perez` con dirección IPv4 `172.18.7.62`.
-*Para el servidor `nfs-server-09.hernandez` con dirección IPv4 `172.18.9.52`.
+* Para el cliente GNU/Linux, el nombre `nfs-client-07.perez` con dirección IPv4 `172.18.7.62`.
+
+* Para el servidor `nfs-server-09.hernandez` con dirección IPv4 `172.18.9.52`.
 
 ![](files/susenfs/nfs00.png)
 
@@ -171,8 +172,6 @@ Para la carpeta "public" vamos a poner a cualquier host (*) con los permisos de 
 
 ![](files/susenfs/nfs05.png)
 
-
-
 La carpeta /var/export/private, sea accesible sólo desde la IP del cliente, y sólo en modo lectura. De manera que, establecemos el host cliente `nfs-client-07.perez` mediante su ip `172.18.7.62` y los permisos, que hemos dicho que serán sólo de lectura:
 
 * **/var/export/private** --> `172.18.7.62/32 ro,siync,subtree_check`:
@@ -192,7 +191,7 @@ Para acabar, comprobamos que el servicio está en funcionamiento lanzando el com
 
 ![](files/suseclient/10.png)
 
-* Configuración del fichero /etc/hosts (añadimos las líneas correspondientes al servidor y cliente)
+* Configuración del fichero /etc/hosts (añadimos las líneas correspondientes al servidor y cliente):
 
 ![](files/suseclient/11.png)
 
@@ -228,7 +227,7 @@ Utilizamos el comando `df -hT` para comprobar que se ha montado el recurso:
 
 ![](files/suseclient/18.png)
 
-Ahora comprobamos que desde el cliente, no puedo crear escribir dentro de private (sólo lectura) pero si de public (lectura y escritura):
+Ahora comprobamos que desde el cliente, no puedo crear nada ni escribir dentro de private (sólo lectura) pero si de public (lectura y escritura):
 
 ![](files/suseclient/19.png)
 
@@ -242,11 +241,13 @@ Y efectivamente, no me deja guardar la línea que he escrito dentro del fichero,
 
 ### 3.3 Montaje automático
 
+En esta última parte de la práctica, configuramos las acciones de montaje automáticas para que cada vez que se inicie el equipo se monten las carpetas compartidas NFS. Para ello, modificamos el fichero `/etc/fstab` de la siguiente manera:
+
 ![](files/suseclient/22.png)
 
 ## 4. Preguntas finales
 
-En este apartado, y a modo de desenlace para este documento, se han planteado diversas cuestiones a atender ya que hemos visto cómo podemos hacer uso de los servicios NFS en un sistema windows y en un sistema GNU/Linux, de forma independiente. 
+En este apartado, y a modo de desenlace para este documento, se han planteado diversas cuestiones a atender ya que hemos visto cómo podemos hacer uso de los servicios NFS en un sistema Windows y en un sistema GNU/Linux, de forma independiente. 
 
 La cuestión ahora es: 
 
@@ -258,8 +259,11 @@ La cuestión ahora es:
 
 Veamos primero el caso servidor Windows de NFS y cliente GNU/Linux.
 
+* En este apartado, montamos los recursos NFS del servidor Windows en el cliente OpenSuse y comprobamos dichos recursos montados:
 
 ![](files/suseclient/23.png)
+
+> Como vemos en la imagen, no podemos acceder a los recursos por un problema de conversión entre los dos sistemas operativos.
 
 ### 4.2. Cliente Windows y Servidor GNU/Linux (NFS)
 
@@ -302,4 +306,3 @@ Revisamos las propiedades ahora del fichero que podemos ver (no editar) en la ca
 Comprobamos que tampoco podemos cambiar los modos de permiso de éste:
 
 ![](files/cwnfssuse/06.png)
-
