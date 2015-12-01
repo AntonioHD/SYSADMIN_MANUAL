@@ -73,7 +73,7 @@ Por último, ejecutamos el comando `showmount -e 172.18.7.22` para comprobar que
 
 ### 2.2 Cliente NFS Windows
 
-Ahora, vamos a realizar las comprobaciones desde un cliente Windows, conectandonos al servidor NFS.
+Ahora, vamos a realizar las comprobaciones desde un cliente Windows, conectándonos al servidor NFS.
 
 Nos aseguramos primero de configurar el nombre de host y la dirección IPv4, de forma correcta. Host `Hernandez-09-wc` y con ip `172.18.9.12`:
 
@@ -91,8 +91,10 @@ Iniciamos el intérprete de comandos de windows como administradores y lanzamos 
 Con `showmount -e 172.18.7.22` mostramos los recursos publicados por el servidor a la red. Y con el comando `mount -o anon,nolock,r,casesensitive \\172.18.7.22\public *` montamos los recursos en la máquina cliente. Este comando se compone principalmente de 3 partes:
 
 * Una primera a modo de encabezado `mount -o` que es la orden que monta el directorio.
+
 * Una segunda o intermedia `anon,nolock,r,casesensitive` que conforma los modos de permiso del recurso que vamos a montar.
-* Y una última parte `\\172.18.7.22\public *` en la que se especifica la dirección ip del directorio que queremos montar junto con su ruta física y, al final, una letra con la que queremos identificar dicho montaje (en este caso * para que coja la letra siguiente disponibleen el equipo).
+
+* Y una última parte `\\172.18.7.22\public *` en la que se especifica la dirección ip del directorio que queremos montar junto con su ruta física y, al final, una letra con la que queremos identificar dicho montaje (en este caso * para que coja la letra siguiente disponible en el equipo).
 
 ![](files/cwnfs/03.png)
 
@@ -149,11 +151,15 @@ En este punto vamos a crear las carpetas físicas que asociaremos a los recursos
 
 Los propietarios de las carpetas, así como los permisos asignados atenderán al siguiente esquema:
 
-* La carpeta ```public``` no tendrá propietario "nobody" y pertenecerá a ningún grupo "nogroup". 
-* La carpeta ```private``` tampoco tendrá propietario, y no estará asociado a algún grupo. Los permisos que tendrá serán:	
- * De Lectura, Escritura y Ejecución para el propietario (7__)
- * De Lectura, Escritura y Ejecución para el grupo (_7_)
- * Y ningúno para el resto de usuarios (__0)
+* La carpeta ```public``` no tendrá propietario "nobody" y pertenecerá a ningún grupo "nogroup".
+
+* La carpeta ```private``` tampoco tendrá propietario, y no estará asociado a algún grupo. Los permisos que tendrá serán:
+	
+ * De Lectura, Escritura y Ejecución para el propietario (.7._._.)
+ 
+ * De Lectura, Escritura y Ejecución para el grupo (._.7._.)
+ 
+ * Y ningúno para el resto de usuarios (._._.0.)
 
 ![](files/susenfs/nfs04b.png)
 
@@ -264,6 +270,7 @@ Mostramos primero los recursos que están publicados por el servidor mediante el
 Nuevamente, haciendo uso del comando `mount -o anon,nolock,r,cassesensitive`, la ip, la ruta de la carpeta y la letra que queremos asignarle al recurso (podemos poner *), montamos la misma en nuestro sistema:
 
 * `mount -o anon,nolock,r,cassesensitive 172.18.9.52:/var/export/private/ *`
+
 * `mount -o anon,cassesensitive 172.18.9.52:/var/export/public/ *`
 
 ![](files/cwnfssuse/00.png)
