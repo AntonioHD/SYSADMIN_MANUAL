@@ -20,13 +20,16 @@ Para entender mejor este protocolo hay que partir de la definición de "servicio
 
 Esta base de datos suele estar optimizada para "operaciones de búsqueda", filtrado y lectura más que para operaciones de inserción o transacciones complejas.
 
-En el caso del procolo LDAP, éste se rige por el estándar "X.500", tal vez el más conocido y está diseñado para operar directamente sobre los protocolos TCP/IP.
+En el caso del procolo LDAP, éste se rige por el estándar "X.500", tal vez el más conocido y está diseñado para operar directamente sobre los protocolos TCP/IP; y permite el acceso a la información del directorio mediante un esquema clienteservidor, donde uno o varios servidores mantienen la misma información de directorio y los clientes realizan consultas a cualquiera de ellos. Ante una consulta concreta de un cliente, el servidor contesta con la información solicitada y/o con un "puntero" donde conseguir dicha información o datos adicionales (normalmente, el "puntero" es otro servidor de directorio).
 
-LDAP permite el acceso a la información del directorio mediante un esquema clienteservidor,
-donde uno o varios servidores mantienen la misma información de directorio (actualizada mediante réplicas) y los clientes realizan consultas a cualquiera de ellos. Ante
-una consulta concreta de un cliente, el servidor contesta con la información solicitada y/o con
-un "puntero" donde conseguir dicha información o datos adicionales (normalmente, el "puntero"
-es otro servidor de directorio).
+## 2. Servidor LDAP en OpenSUSE
+
+### 2.1. Configuraciones previas
+
+### 2.2. Instalación y configuración de LDAP
+
+### 2.3. Creación de gurpos/usuarios LDAP
+
 
 ![](files/server/00.png)
 ![](files/server/01.png)
