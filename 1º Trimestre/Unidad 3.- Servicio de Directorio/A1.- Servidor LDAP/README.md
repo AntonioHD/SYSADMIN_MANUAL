@@ -15,9 +15,7 @@ Para la tarea que se nos presenta hemos redactado el siguiente informe con los p
 
 Para entender mejor este protocolo hay que partir de la definición de "servicio de directorio":
 
-```
-Aplicación o conjunto de éstas que almacena y organiza la información sobre los usuarios de una red de ordenadores y sobre los recursos de red, que permite a los administradores gestionar el acceso de usuarios a los recursos sobre dicha red. Hace uso de una base de datos denominada "directorio" para el almacenamiento de dicha información.
-```
+```Aplicación o conjunto de éstas que almacena y organiza la información sobre los usuarios de una red de ordenadores y sobre los recursos de red, que permite a los administradores gestionar el acceso de usuarios a los recursos sobre dicha red. Hace uso de una base de datos denominada "directorio" para el almacenamiento de dicha información.```
 
 
 Esta base de datos suele estar optimizada para "operaciones de búsqueda", filtrado y lectura más que para operaciones de inserción o transacciones complejas.
