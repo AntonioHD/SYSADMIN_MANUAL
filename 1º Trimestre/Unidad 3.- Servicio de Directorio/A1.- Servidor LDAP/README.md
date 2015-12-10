@@ -62,3 +62,5 @@ En el caso del procolo LDAP, éste se rige por el estándar "X.500", tal vez el 
 ![](files/client/05.png)
 ![](files/client/06.png)
 ![](files/client/07.png)
+![](files/client/s0.png)
+![](files/client/s1.png)
