@@ -89,6 +89,8 @@ Especificamos la contraseña del administrador y, para acabar, la carpeta físic
 
 ![](files/server/08.png)
 
+La autenticación Kerberos la dejaremos sin habilitiar
+
 ![](files/server/09.png)
 
 ![](files/server/10.png)
