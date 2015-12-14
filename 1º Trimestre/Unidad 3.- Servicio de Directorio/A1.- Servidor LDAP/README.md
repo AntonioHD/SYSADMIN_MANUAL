@@ -51,19 +51,41 @@ Los nombres que resolveran la IP de nuestra máquina servidor serán:
 
 ### 2.2. Instalación y configuración de LDAP
 
-Descargamos desde la herramienta YaST iniciando el "Software Manager" (instalar/desisntalar software"), el paquete `yast2-auth-server`; el cual contiene el software necesario para la implementación del servicio de directorio LDAP:
+Descargamos desde la herramienta YaST iniciando el "Software Manager" (instalar/desisntalar software"), el paquete `yast2-auth-server;` el cual contiene el software necesario para la implementación del servicio de directorio LDAP:
 
 ![](files/server/00.png)
 
+Una vez instalado, comprobamos que aparece en YaST los "servicios de red" `Authentication Sever` y `OpenLDAP MirrorMode`:
+
 ![](files/server/03.png)
+
+Iniciamos el "Auhentication Server" y se nos abrirá una ventana en la que se nos pide que instalemos los paquetes "Openldap2", "krb-server" y "krb5-client". Damos en instalar y seguimos:
 
 ![](files/server/04.png)
 
+Una vez instalados los paquetes que se nos requerían, se abrirá la ventana de configuración con los "Ajustes generales". Seleccionamos que se inicie el servidor LDAP y que el puerto del que va a hacer uso, y por el que va a transmitir la información de las credenciales de los usuarios ldap, esté abierto en los ajustes del cortafuegos:
+
 ![](files/server/05.png)
+
+Como "Tipo de servidor" elegiremos la opción de "Servidor autónomo":
 
 ![](files/server/06.png)
 
+En la siguiente ventana del asistente para la configuración de LDAP nos da la opción de habilitar el protocolo "TLS", el cual se emplea para encriptar las transmisiones. En esta ocasión lo dejaremos deshabilitado:
+
 ![](files/server/07.png)
+
+Ahora, elegiremos el tipo de base de datos de la que va a hacer uso el servicio de directorio, en este caso la "HDB". Luego, como dicho servicio debe tener una base a partir de la cual cuelgan el resto de elementos; como nombre de la base (DN) especificaremos lo siguiente:
+
+* dc=antonio09, dc=curso1516
+
+Como DN de administrador ponemos:
+
+* cn=Administrator
+
+Especificamos la contraseña del administrador y, para acabar, la carpeta física que vamos a emplear como directorio de la base de datos:
+
+* /var/lib/ldap
 
 ![](files/server/08.png)
 
