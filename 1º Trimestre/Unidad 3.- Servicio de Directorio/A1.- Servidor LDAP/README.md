@@ -38,7 +38,7 @@ Establecemos los parámetros siguientes para nuestra máquina servidor:
 
 ![](files/server/01.png)
 
-Introducimos también varios nombres de hosts que indetifiquen nuestra máquina, editando el fichero ´/etc/hosts´.
+Introducimos también varios nombres de hosts que indetifiquen nuestra máquina, editando el fichero `/etc/hosts`.
 
 Los nombres que resolveran la IP de nuestra máquina servidor serán:
 
@@ -51,7 +51,7 @@ Los nombres que resolveran la IP de nuestra máquina servidor serán:
 
 ### 2.2. Instalación y configuración de LDAP
 
-Descargamos desde la herramienta YaST iniciando el "Software Manager" (instalar/desisntalar software"), el paquete ´yast2-auth-server´; el cual contiene el software necesario para la implementación del servicio de directorio LDAP:
+Descargamos desde la herramienta YaST iniciando el "Software Manager" (instalar/desisntalar software"), el paquete `yast2-auth-server`; el cual contiene el software necesario para la implementación del servicio de directorio LDAP:
 
 ![](files/server/00.png)
 
