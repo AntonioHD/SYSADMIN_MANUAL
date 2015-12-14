@@ -28,11 +28,30 @@ Empezaremos configurando nuestro servicio de directorio LDAP en una máquina Ope
 
 ### 2.1. Configuraciones previas
 
+Establecemos los parámetros siguientes para nuestra máquina servidor:
+
+* Dirección IPv4: 172.18.9.51/16
+
+* Como nombre de host: ldap-server-09
+
+* Como dominio: Curso1516
 
 ![](files/server/01.png)
+
+Introducimos también varios nombres de hosts que indetifiquen nuestra máquina, editando el fichero ´/etc/hosts´.
+
+Los nombres que resolveran la IP de nuestra máquina servidor serán:
+
+* 127.0.0.2 --> ldap-server-09.curso1516 ldap-server-09
+* 172.18.9.51 --> ldap-server-09.curso1516 ldap-server-09
+* 127.0.0.3 --> antonio09.curso1516 antonio09
+
+
 ![](files/server/02.png)
 
 ### 2.2. Instalación y configuración de LDAP
+
+Descargamos desde la herramienta YaST iniciando el "Software Manager" (instalar/desisntalar software"), el paquete ´yast2-auth-server´; el cual contiene el software necesario para la implementación del servicio de directorio LDAP:
 
 ![](files/server/00.png)
 
