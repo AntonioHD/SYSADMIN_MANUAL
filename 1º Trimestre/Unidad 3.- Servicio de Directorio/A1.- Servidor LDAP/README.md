@@ -24,25 +24,41 @@ En el caso del procolo LDAP, éste se rige por el estándar "X.500", tal vez el 
 
 ## 2. Servidor LDAP en OpenSUSE
 
+Empezaremos configurando nuestro servicio de directorio LDAP en una máquina OpenSUSE, estableceremos los parámetros de red necesarios como dirección IP, nombre de equipo, nombre de host, dominio... e instalaremos los paquetes necesarios para montar nuestro servicio de directorio. 
+
 ### 2.1. Configuraciones previas
 
+
+![](files/server/01.png)
+![](files/server/02.png)
+
 ### 2.2. Instalación y configuración de LDAP
+
+![](files/server/00.png)
+
+![](files/server/03.png)
+
+![](files/server/04.png)
+
+![](files/server/05.png)
+
+![](files/server/06.png)
+
+![](files/server/07.png)
+
+![](files/server/08.png)
+
+![](files/server/09.png)
+
+![](files/server/10.png)
+
+![](files/server/11.png)
+
 
 ### 2.3. Creación de gurpos/usuarios LDAP
 
 
-![](files/server/00.png)
-![](files/server/01.png)
-![](files/server/02.png)
-![](files/server/03.png)
-![](files/server/04.png)
-![](files/server/05.png)
-![](files/server/06.png)
-![](files/server/07.png)
-![](files/server/08.png)
-![](files/server/09.png)
-![](files/server/10.png)
-![](files/server/11.png)
+
 ![](files/server/12.png)
 ![](files/server/13.png)
 ![](files/server/14.png)
