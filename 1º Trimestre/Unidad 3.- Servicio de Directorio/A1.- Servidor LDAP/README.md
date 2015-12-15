@@ -173,7 +173,7 @@ Una vez en la venta de configuración del cliente de autenticación, hacemos cli
 
 ![](files/client/03.png)
 
-Ahora, si hacemos click en "Editar" podemos especficiar (a parte de los proveedores de identificación y autenticación que ya habíamos establecido) el esquema ldap y su uri ('indetificador de Recurso Uniforme'); el cual definiremos con uno de los nombres de host que apunten a nuestra máquina servidor de LDAP seguido del puerto del que va a hacer uso, el 389:
+Ahora, si hacemos click en "Editar" podemos especficiar (a parte de los proveedores de identificación y autenticación que ya habíamos establecido) el esquema ldap y su uri ('idetificador de Recurso Uniforme'); el cual definiremos con uno de los nombres de host que apunten a nuestra máquina servidor de LDAP seguido del puerto del que va a hacer uso, el 389:
 
 * **ldap://ldap-server-09.curso1516:389**
 
@@ -183,13 +183,10 @@ Una vez terminada la configuración del dominio de aunteticación, trataremos de
 
 En este punto nos hemos topado con que, al lanzar el comando "su" y la cuenta de usuario ldap --> `su jedi21`, introducimos la contraseña **correctamente** y nos salta el mensaje siguiente:
 
-`El servicio de autenticación no puede recuperar la información de aunteticación`
+`El servicio de autenticación no puede recuperar la información de auteticación`
 
 Al probar a iniciar la sesión desde una terminal como `superusuario`, saltándonos el proceso de introducción de contraseña y verificación de la misma para el usuario `jedi21`, vemos que **sí** podemos iniciar la sesión con éste:
 
 ![](files/client/05.png)
 
-Comprobado lo anterior, se ha llegado a la cuenta de que existe algún error o laguna en las configuraciones de autenticación o identificación de los servicios de LDAP junto con el cliente del mismo y el método de encriptación de las claves del sistema operativo. Siendo un posible problema el hecho de que la encriptacion de las claves sean diferentes al utilizado en el servidor LDAP, imposibilitando el reconocimiento de las credenciales para nuestros usuarios de LDAP.
-
-Ahondando un poco más en el tema, nos hemos percatado de que la encriptación empleada para las contraseñas a la hora de crear los usuarios LDAP puede ser modificada.
-
+Comprobado lo anterior, se ha llegado a la cuenta de que existe algún error o laguna en las configuraciones de autenticación o identificación de los servicios de LDAP junto con el cliente del mismo y el método de encriptación de las claves del sistema operativo. Siendo un posible problema el hecho de que la encriptacion de las claves sea diferente al utilizado en el servidor LDAP, imposibilitando el reconocimiento de las credenciales para nuestros usuarios de LDAP.
