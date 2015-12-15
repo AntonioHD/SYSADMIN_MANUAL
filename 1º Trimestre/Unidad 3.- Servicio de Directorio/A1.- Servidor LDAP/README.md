@@ -11,7 +11,8 @@
 
 ## 1. Introducción
 
-Para la tarea que se nos presenta hemos redactado el siguiente informe con los procesos necesarios para montar un "servidor" de cuentas y grupos ó, llamado a su vez, "servicio de directorio"; basado en el protocolo "LDAP" (Lightweight Directory Access Protocol).
+Para la tarea que se nos presenta hemos redactado el siguiente informe con los procesos necesarios para montar un "servidor" de cuentas y grupos (entre otro tipo de información de dichas cuentas); es decir, montaremos lo que se conoce como "servicio de directorio".
+Haremos uso de un "servicio de directorio" basado en el protocolo "LDAP" (Lightweight Directory Access Protocol).
 
 Para entender mejor este protocolo hay que partir de la definición de "servicio de directorio":
 
@@ -89,26 +90,67 @@ Especificamos la contraseña del administrador y, para acabar, la carpeta físic
 
 ![](files/server/08.png)
 
-La autenticación Kerberos la dejaremos sin habilitar
+La autenticación Kerberos la dejaremos sin habilitar. Ésta auntenticación, basada en el protocolo Kerberos, permite a dos ordenadores en una red insegura demostrar su identidad mutuamente de manera segura:
 
 ![](files/server/09.png)
 
+Para finalizar la configuración de nuestro servicio de directorio se nos mostrará una ventana "resumen" con todos los parámetros que hemos ido especificando:
+
 ![](files/server/10.png)
+
+Para asegurarnos de que el servicio de red esté activo, lanzaremos los comandos `sudo systemctl start slapd` para arrancar dicho servicio, y `sudo systemctl status slapd`:
 
 ![](files/server/11.png)
 
+### 2.3. Creación de grupos/usuarios LDAP
 
-### 2.3. Creación de gurpos/usuarios LDAP
+En este punto crearemos los distintos grupos y usuarios que coexistirán en la base de datos de nuestro servicio LDAP. Para ello, nos vamos nuevamente a la herramienta "YaST" y en "Administración de Usuarios y grupos", crearemos los usuarios y los grupos estableciendo el filtro "LDAP" para ambos casos.
 
+En primer lugar nos vamos a "Usuarios", y damos en "Definir filtro" --> "Usuarios LDAP". Luego, haciendo click en "Añadir" especificiamos uno a uno los usuarios que queremos integrar en la base de datos junto con su contraseña:
 
+Crearemos las siguientes cuentas:
+
+* Jedi21
+* Jedi22
+* Sith21
+* Sith22
 
 ![](files/server/12.png)
+
+Cuando demos en "añadir" se nos pedirá que ingresemos la contraseña de nuestro servidor LDAP para la base de datos que teníamos especificada y como usuario "administrator":
+
 ![](files/server/13.png)
+
+Aquí vemos la creación del usuario "jedi21":
+
 ![](files/server/14.png)
+
+Una vez los hayamos creado todos nos aparecerán como "usuarios LDAP":
+
 ![](files/server/15.png)
+
+Ahora, haremos lo mismo que en el paso anterior pero con los grupos; especificando el filtro como "grupos LDAP" y en añadir nos aparecerá la siguiente ventana donde podremos, a su vez, especificar los miembros de dicho grupo.
+
+Crearemos los grupos:
+
+* jedis2
+* sith2
+
 ![](files/server/16.png)
+
+Comprobamos que están definidos correctamente:
+
 ![](files/server/17.png)
+
+### 2.3. Creación de Unidades Organizativas LDAP
+
+Para ver el árbol de usuarios, grupos y unidades organizativas que tenemos, una vez creados los grupos y los usuarios, descargaremos el paquete "Cliente LDAP" llamado "gq":
+
 ![](files/server/18.png)
+
+Vemos que existen las unidades organizativas `group` y `people`, y que para la unidad organizativa "group" se han añadido los grupos "jedis2" y "sith2".
+Y que en la unidad organizativa "people" se encuentran todos los usuarios LDAP (jedi21, jedi22, sith21 y sith22):
+
 ![](files/server/19.png)
 
 ---
