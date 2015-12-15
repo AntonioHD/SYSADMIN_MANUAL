@@ -11,7 +11,7 @@
 
 ## 1. Introducción
 
-Para la tarea que se nos presenta hemos redactado el siguiente informe con los procesos necesarios para montar un "servidor" de cuentas y grupos (entre otro tipo de información de dichas cuentas); es decir, montaremos lo que se conoce como "servicio de directorio".
+Para la tarea que se nos presenta hemos redactado el siguiente informe con los procesos necesarios para montar un "servidor" de cuentas y grupos (entre otro tipo de información de dichas cuentas) que nos permita centralizar las credenciales de los usuarios de una red en un único sitio; es decir, montaremos lo que se conoce como "servicio de directorio".
 Haremos uso de un "servicio de directorio" basado en el protocolo "LDAP" (Lightweight Directory Access Protocol).
 
 Para entender mejor este protocolo hay que partir de la definición de "servicio de directorio":
@@ -90,7 +90,7 @@ Especificamos la contraseña del administrador y, para acabar, la carpeta físic
 
 ![](files/server/08.png)
 
-La autenticación Kerberos la dejaremos sin habilitar. Ésta auntenticación, basada en el protocolo Kerberos, permite a dos ordenadores en una red insegura demostrar su identidad mutuamente de manera segura:
+La autenticación Kerberos la dejaremos sin habilitar. Ésta autenticación, basada en el protocolo Kerberos, permite a dos ordenadores en una red insegura demostrar su identidad mutuamente de manera segura:
 
 ![](files/server/09.png)
 
@@ -98,7 +98,7 @@ Para finalizar la configuración de nuestro servicio de directorio se nos mostra
 
 ![](files/server/10.png)
 
-Para asegurarnos de que el servicio de red esté activo, lanzaremos los comandos `sudo systemctl start slapd` para arrancar dicho servicio, y `sudo systemctl status slapd`:
+Para asegurarnos de que el servicio de red esté activo, lanzaremos los comandos `sudo systemctl start slapd` para arrancar dicho servicio, y `sudo systemctl status slapd` para verificar su estado:
 
 ![](files/server/11.png)
 
@@ -117,7 +117,7 @@ Crearemos las siguientes cuentas:
 
 ![](files/server/12.png)
 
-Cuando demos en "añadir" se nos pedirá que ingresemos la contraseña de nuestro servidor LDAP para la base de datos que teníamos especificada y como usuario "administrator":
+Cuando demos en "añadir" se nos pedirá que ingresemos la contraseña de nuestro servidor LDAP para la base de datos que teníamos especificada, iniciando con el usuario "administrator":
 
 ![](files/server/13.png)
 
@@ -129,7 +129,7 @@ Una vez los hayamos creado todos nos aparecerán como "usuarios LDAP":
 
 ![](files/server/15.png)
 
-Ahora, haremos lo mismo que en el paso anterior pero con los grupos; especificando nuevamente el filtro como "grupos LDAP", damos en añadir. Nos aparecerá la siguiente ventana donde podremos, a la vez que creamos el grupo, especificar los miembros del mismo.
+Ahora, haremos lo mismo que en el paso anterior pero con los grupos; especificando nuevamente el filtro como "grupos LDAP", para luego hacer click en "añadir". Nos aparecerá la siguiente ventana donde podremos, a la vez que creamos el grupo, especificar los miembros del mismo.
 
 Crearemos los grupos:
 
@@ -142,7 +142,7 @@ Comprobamos que están definidos correctamente:
 
 ![](files/server/17.png)
 
-### 2.3. Creación de Unidades Organizativas LDAP
+### 2.3. Unidades Organizativas LDAP
 
 Para ver el árbol de usuarios, grupos y unidades organizativas que tenemos, una vez creados los grupos y los usuarios, descargaremos el paquete "Cliente LDAP" llamado "gq":
 
@@ -153,15 +153,43 @@ Y que en la unidad organizativa "people" se encuentran todos los usuarios LDAP: 
 
 ![](files/server/19.png)
 
----
+## 3. Cliente LDAP
+
+En este punto realizaremos los procesos pertinentes para poder comprobar que el acceso con los usuarios LDAP que hemos establecido en puntos anteriores se realiza correctamente. 
+
+En primer lugar, instalaremos el paquete `yast2-auth-client` para configurar el acceso con los usuarios LDAP asociados al dominio "curso1516" y a la base de datos que contiene a dichos usuarios.
+
+Para su instalación haremos uso nuevamente del "instalador/desisntalador de software" que encontramos en YaST:
 
 ![](files/client/00.png)
+
+Vemos que nos aparece como servicio de red la herramienta "Authentication Client", la iniciamos:
+
 ![](files/client/01.png)
+
+Una vez en la venta de configuración del cliente de autenticación, hacemos click en "añadir" y especificamos el nombre de dominio --> `curso1516`, el proveedor de la **identificación** usada por el dominio --> `ldap` y por último, el proveedor de la **autenticación** usada por el dominio, también -->`ldap`. Terminamos con darle en "Aceptar" y se nos creará el dominio de autenticación;
+
 ![](files/client/02.png)
+
 ![](files/client/03.png)
+
+Ahora, si hacemos click en "Editar" podemos especficiar (a parte de los proveedores de identificación y autenticación que ya habíamos establecido) el esquema ldap y su uri ('indetificador de Recurso Uniforme'); el cual definiremos con uno de los nombres de host que apunten a nuestra máquina servidor de LDAP seguido del puerto del que va a hacer uso, el 389:
+
+* **ldap://ldap-server-09.curso1516:389**
+
 ![](files/client/04.png)
+
+Una vez terminada la configuración del dominio de aunteticación, trataremos de iniciar sesión de forma local con uno de los usuarios LDAP que hemos implementado.
+
+En este punto nos hemos topado con que, al lanzar el comando "su" y la cuenta de usuario ldap --> `su jedi21`, introducimos la contraseña **correctamente** y nos salta el mensaje siguiente:
+
+`El servicio de autenticación no puede recuperar la información de aunteticación`
+
+Al probar a iniciar la sesión desde una terminal como `superusuario`, saltándonos el proceso de introducción de contraseña y verificación de la misma para el usuario `jedi21`, vemos que **sí** podemos iniciar la sesión con éste:
+
 ![](files/client/05.png)
-![](files/client/06.png)
-![](files/client/07.png)
-![](files/client/s0.png)
-![](files/client/s1.png)
+
+Comprobado lo anterior, se ha llegado a la cuenta de que existe algún error o laguna en las configuraciones de autenticación o identificación de los servicios de LDAP junto con el cliente del mismo y el método de encriptación de las claves del sistema operativo. Siendo un posible problema el hecho de que la encriptacion de las claves sean diferentes al utilizado en el servidor LDAP, imposibilitando el reconocimiento de las credenciales para nuestros usuarios de LDAP.
+
+Ahondando un poco más en el tema, nos hemos percatado de que la encriptación empleada para las contraseñas a la hora de crear los usuarios LDAP puede ser modificada.
+
