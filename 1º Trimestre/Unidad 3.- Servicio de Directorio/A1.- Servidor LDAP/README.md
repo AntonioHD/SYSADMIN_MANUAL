@@ -142,7 +142,7 @@ Comprobamos que están definidos correctamente:
 
 ![](files/server/17.png)
 
-### 2.3. Unidades Organizativas LDAP
+### 2.4. Unidades Organizativas LDAP
 
 Para ver el árbol de usuarios, grupos y unidades organizativas que tenemos, una vez creados los grupos y los usuarios, descargaremos el paquete "Cliente LDAP" llamado "gq":
 
