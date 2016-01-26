@@ -104,12 +104,13 @@ A su vez, éste comando tiene una sintáxis específica que deberemos respetar, 
 
 Un ejemplo sería:
 
-* Lanzamos el comando `crontab -e`para que se nos abra el editor del fichero crontab.
+* Lanzamos el comando `crontab -e` para que se nos abra el editor del fichero crontab.
 
 * Y agregamos las siguientes líneas:
 
-* * `# Hacer una copia de seguridad del directorio documentos cada día a las 00:00`
-* * `0 0 * * * tar -czf docs-`date -I`.tar.gz /home/antonio/documentos/`
+* * `#Hacer una copia de seguridad del directorio documentos cada día a las 00:00`
+
+* * `0 0 * * * tar -czf docs-'date -I'.tar.gz /home/antonio/documentos/`
 
 Si queremos definir una tarea periódica para todo el sistema, existe un fichero del que sólo puede hacer uso el usuario `root` destinado a tal fin; el fichero `/etc/crontab`.
 Editándolo de forma manual podemos introducir en él las tareas que queremos definir. Este fichero tiene la misma sintáxis específica que en el caso del comando, con la salvedad que después de los parámetros de tiempo agregaremos `root` como un campo más, para en el siguiente poner el comando a ejecutar.
