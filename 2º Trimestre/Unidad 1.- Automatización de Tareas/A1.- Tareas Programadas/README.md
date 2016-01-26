@@ -129,10 +129,17 @@ Para luego darle permisos de ejecución y lanzarlo desde la terminal para compro
 
 ![](files/suse/p01.png)
 
-![](files/suse/p00.png)
+Ahora, editamos el fichero `/etc/crontab` para agregar las siguientes líneas:
 
+* `#TAREA PROGRAMADA PARA EJECUTARSE CADA 5 MIN`
+* `0-59/5 * * * * root /home/antonio/Documentos/tareaperiodica.sh`
+
+Si nos fijamos en el primer campo de la 2º línea que hemos introducido (campo minutos), podemos ver que se ha definido para que se ejecute cada 5 minutos de reloj, dividiendo el total de minutos (0-59) entre 5. Con lo cual se ejecutará 12 veces por hora, a todas horas, todos los días, todos los meses y todos los años; puesto que hemos puesto * en el resto de campos.
 
 ![](files/suse/p04b.png)
+
+
+Si nos vamos ahora al fichero `/home/antonio/cron.log`, en el que el script va a guardar la fecha y hora, vemos que efectivamente hay un registro cada 5 min:
 
 ![](files/suse/p04c.png)
 
@@ -143,7 +150,7 @@ Para luego darle permisos de ejecución y lanzarlo desde la terminal para compro
 ![](files/suse/as00.png)
 
 
-* * *
+***
 
 ## 3. Tareas Programadas en Windows 7 Enterprise
 
