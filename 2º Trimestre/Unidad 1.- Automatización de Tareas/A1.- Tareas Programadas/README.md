@@ -27,14 +27,18 @@ Si queremos que una tarea se realice "periódicamente", ya sea cada mes, semana,
 
 En caso de que no tengamos claro el momento exacto pero sí el periodo de tiempo en el que queremos que se ejecute (o se vuelva a ejecutar) un proceso, utilizaremos las tareas asíncronas. Éstas se definen siguiendo el mismo esquema que en las periódicas con la salvedad de que no se especficará un momento exacto de ejecución, sino que le diremos el periodo comprendido entre una ejecución y la siguiente, y ésta se realizará en el momento que pueda, teniendo en cuenta dicho periodo.
 
+Dichas tareas pueden basarse en la ejecución de un programa que tengamos instalado en nuestro sistema o en ejecutar un script que nosotros mismos elaboremos y que en él se recojan los procesos que creamos convenientes, según la tarea que prentendamos definir.
 
-Par terminar esta parte introductoria cabe decir que hemos empleado un sistema operativo GNU/Linux, en concreto OpenSUSE 13.2, y un sistema operativo Windows 7 Enterprise; en los cuales hemos planificado 3 tareas programadas para cada sistema, contemplando para ello el hacer uso de una de cada tipo, cubriendo así todas las posibilidades para ambos sistemas.
+Para terminar esta parte introductoria cabe decir que hemos empleado un sistema operativo GNU/Linux, en concreto OpenSUSE 13.2, y un sistema operativo Windows 7 Enterprise; en los cuales hemos planificado 3 tareas programadas para cada sistema, contemplando para ello el hacer uso de una de cada tipo, cubriendo así todas las posibilidades para ambos sistemas.
 
 
 ## 2. Tareas Programadas en OpenSUSE
 
+Empezaremos definiendo las tareas programadas en OpenSUSE, empleando para ello los comandos `at` para las tareas diferidas, el fichero `/etc/crontab" para las tareas periódicas y, para las tareas asíncronas, las carpetas `cron` --> `cron.hourly`, `cron.daily` y `cron.monthly`.
 
 ### 2.1. Configuraciones Previas
+
+Siguiendo los parámetros definidos en el esquema que vemos a continuación vamos a configurar nuestra máquina:
 
 * IP: 172.18.9.51
 * Máscara de red: 255.255.0.0
@@ -44,23 +48,42 @@ Par terminar esta parte introductoria cabe decir que hemos empleado un sistema o
 * Nombre de dominio: dominguez
 * Tarjeta de red VBox en modo puente.
 
+Vemos los parámetros previos definidos:
+
 ![](files/suse/a01.png)
+
+A su vez, instalaremos o nos aseguraremos de que tenemos instalado los servicios `SSH`:
 
 ![](files/suse/a02.png)
 
 ### 2.2. Tarea Programada Diferida
 
+Ahora sí, configuraremos una primera tarea programada de tipo `diferida` que se ejecutará en el momento exacto que establezcamos. Para ello hacemos uso de un script para intérpretes de comandos shell (el empleado en sistemas Unix) con el siguiente código:
+
+```
+#!bin/sh
+	#Tarea programada diferida de apagado del sistema
+		sudo shutodwn
+```
+
+Luego, para lanzar la tarea programada escribiremos `at` <el momento en el que queremos que se ejecute> < <y el nombre o ruta del script a ejecutar>; en nuestro caso quedaría de la siguiente manera `at 08:35am today < tareadiferida.sh`. Nos aparecerá un mensaje de tipo "Warning" con el aviso de que se ejecutará el script en cuestión, donde especificará en la siguiente línea la fecha y hora de dicha ejecución.
+
 
 ![](files/suse/a03.png)
 
-![](files/suse/a04.png)
+
+En este caso nos hemos topado con un error al lanzar el comando `at`, el cual nos indica que el demonio de este comando no está funcionando por lo que escribimos ``sudo atd` para que arranque el demonio del programa y podamos establecer nuesta tarea diferida:
 
 ![](files/suse/a07.png)
+
+Si no queremos hacer uso de un script, podemos lanzar el comando `at` en la terminal con los parámetros de fecha y hora en que queremos que se ejecute la tarea, y nos aparececerá una nueva línea debajo en la que introducir los procesos que queramos que se ejecuten para esa tarea; cuando terminemos de definir la líneas simplemente pulsamos la combinación de teclas `ctrl+d` y finalizamos la creación de la tarea:
 
 ![](files/suse/a08.png)
 
 
 ### 2.3. Tarea Programada Periódica
+
+Pasamos ahora a definir una tarea programada mediante el uso del fichero `/etc/crontab`
 
 ![](files/suse/p00.png)
 
@@ -87,6 +110,9 @@ Par terminar esta parte introductoria cabe decir que hemos empleado un sistema o
 
 ## 3. Tareas Programadas en Windows 7 Enterprise
 
+Para definir tareas programadas en Windows, emplearemos la herramienta administrativa `Programador de Tareas` que podemos encontrar en "Panel de control -> Herramientas administrativas -> Programador de tareas".
+
+Para éste sistema se emplea un entorno gráfico, diferenciándose drásticamente con respecto a la programación de tareas en los sistemas GNU/Linux.
 
 ### 3.1. Configuraciones Previas
 
