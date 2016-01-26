@@ -271,10 +271,23 @@ Hemos esperado nuevamente a llegar a la hora desencadenante de la tarea para ver
 
 ### 3.4. Tarea Programada Asíncrona
 
+Para acabar vamos a crear una tarea programada asíncrona con el asistente de windows, en la que realizaremos una copia de seguridad de nuestra carpeta usuario a otra que será la de respaldo.
+
+En este caso hemos optado por crear un script con extensión `.bat` que se ejecute cuando la tarea cumpla con los parámetros desencadenantes que definamos, y en el que hemos metido los comandos para realizar la copia de seguridad que comentábamos.
 
 ![](files/w7/a0.png)
 
+También hemos creado la carpeta para alojar la copia que se haga al lanzar el fichero, cuya ruta está definida en el script:
+
 ![](files/w7/a1.png)
+
+Volviendo al "Programador de tareas", vamos a seguir los mismos pasos que los realizados en las tareas anterios con las siguientes diferencias.
+
+* Se definirá la tarea de modo que se ejecute semanalmente los domingos a las 12:00.
+
+* Con la condición (pestaña `condiciones`) de que se ésta se ejecute sólo si el equipo está inactivo durante 15 minutos.
+
+* Y que se ejecute lo antes posible si no hubo un inicio programado (pestaña `configuración`).
 
 ![](files/w7/a2.png)
 
