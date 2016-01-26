@@ -158,7 +158,7 @@ Como en los casos anteriores, volvemos a crear un script llamado esta vez `tarea
 
 Para esta tarea prentendemos hacer uso de la herramienta `zenity`, la cual nos proporciona una ventana en la que definir el texto que queramos, como hemos hecho en el script, y mostrarla en pantalla.
 
-![](files/suse/zen1.png)
+![](files/suse/zen2.png)
 
 ![](files/suse/as00.png)
 
