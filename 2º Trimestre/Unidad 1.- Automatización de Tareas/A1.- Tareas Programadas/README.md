@@ -83,17 +83,51 @@ Si no queremos hacer uso de un script, podemos lanzar el comando `at` en la term
 
 ### 2.3. Tarea Programada Periódica
 
-Pasamos ahora a definir una tarea programada mediante el uso del fichero `/etc/crontab`
+Pasamos ahora a definir una tarea programada mediante el uso del comando `crontab` o del fichero asociado al mismo `/etc/crontab`.
+
+Este comando, o el fichero del mismo, nos permite programar tareas para realizarlas a ciertas horas, ciertos días de la semana, del mes, del año, etc... Con este comando, cada usuario puede definir sus propias tareas programadas, lanzandolo cada desde su sesión y siguiendo la siguiente sintáxis:
+
+* `crontab -l` Mostrar las tareas programadas por el usuario.
+
+* `crontab -e` Editar el fichero crontab. Con esto editaremos el fichero de configuración de crontab de cada usuario para poder modificar las tareas programadas.
+
+* `crontab -r` Eliminar el fichero crontab corriente.
+
+* `crontab -u <usuario>` Aplicar una de las opciones anteriores para un usuario determinado. Sólo root puede hacerlo.
+
+
+A su vez, éste comando tiene una sintáxis específica que deberemos respetar, de manera que:
+
+* Introduciremos una línea para cada tarea que queramos programar. 
+
+* Y para cada línea respetaremos la composición predefinida de seis campos separados por espacios o tabuladores; estos campos son, en orden: minuto, hora, dia, mes, año, comando.
+
+Un ejemplo sería:
+
+* Lanzamos el comando `crontab -e`para que se nos abra el editor del fichero crontab.
+
+* Y agregamos las siguientes líneas:
+
+* * `# Hacer una copia de seguridad del directorio documentos cada día a las 00:00`
+* * `0 0 * * * tar -czf docs-`date -I`.tar.gz /home/antonio/documentos/`
+
+Si queremos definir una tarea periódica para todo el sistema, existe un fichero del que sólo puede hacer uso el usuario `root` destinado a tal fin; el fichero `/etc/crontab`.
+Editándolo de forma manual podemos introducir en él las tareas que queremos definir. Este fichero tiene la misma sintáxis específica que en el caso del comando, con la salvedad que después de los parámetros de tiempo agregaremos `root` como un campo más, para en el siguiente poner el comando a ejecutar.
+
+En nuestro caso hemos optado por hacer uso de esta última opción para definir una tarea periódica del sistema.
+
+En la captura podemos ver que se genera un script con el nombre `tareaperiodica.sh` con el siguiente código:
+
+```
+#!bin/sh
+	#Añade la fecha/hora a un fichero
+	date >> /home/antonio/cron.log
+```
+
+Le damos permisos de ejecución y lo ejecutamos previamente para ver que funciona correctamente:
 
 ![](files/suse/p00.png)
 
-![](files/suse/p01.png)
-
-![](files/suse/p02.png)
-
-![](files/suse/p03.png)
-
-![](files/suse/p04.png)
 
 ![](files/suse/p04b.png)
 
