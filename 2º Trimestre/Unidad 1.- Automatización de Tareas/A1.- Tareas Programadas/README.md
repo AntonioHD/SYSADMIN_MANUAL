@@ -220,41 +220,54 @@ Una vez que la tengamos damos en aceptar y continuamos:
 
 ![](files/w7/d2.png)
 
-En la pestaña "Acciones" hacemos lo mismo que en la anterior, elegiendo ahora el tipo de acción que queremos que se produzca cuando se den los parámetros "desencadenantes" de nuestra tarea.
+En la pestaña `Acciones` hacemos lo mismo que en la anterior, eligiendo ahora el tipo de acción que queremos que se produzca cuando se den los parámetros "desencadenantes" de nuestra tarea.
 
-Hemos elegido la opción "iniciar un programa" donde hemos definido que éste sea el comando "shutdown" cpn los parámetros "/s"
+Hemos elegido la opción "iniciar un programa" donde hemos definido que éste sea el comando "shutdown" con los parámetros "/s":
 
 ![](files/w7/d03.png)
 
 ![](files/w7/d04.png)
 
+En la pestaña `condiciones` podemos completar lo que ya habíamos definido en la pestaña `desencadenadores`, de manera que si alguna de las condiciones que marquemos no se cumple la tarea no se ejecutará.
+
+Para el caso hemos dejado la que viene marcada por defecto "Detenter si el equipo empieza a usar la batería":
+
 ![](files/w7/d5.png)
+
+Y por último, en la pestaña `Configuración` podemos definir el que la tarea se pueda ejecutar o no a petición, si queremos que se ejecute lo antes posbile, si queremos que en caso de que no se ejecute ésta se reinicie, etc....Hemos dejado las opciones por defecto que no serán relevantes para la ejecución de nuestra tarea diferida.
+
 
 ![](files/w7/d6.png)
 
+Una vez que hacemos click por último en aceptar, ya tendremos definida nuestra tarea donde podremos verla registrada en la carpeta "Biblioteca del Programador de tareas":
+
 ![](files/w7/d7.png)
+
+Hemos esperado a que se cumpliera la hora desencadenante de nuestra tarea para ver si se ejecutaba correctamente. Comprobamos que sí con el siguiente aviso en forma de ventana emergente:
 
 ![](files/w7/d8.png)
 
 ### 3.3. Tarea Programada Periódica
 
+En este apartado seguiremos los mismos pasos que en el anterior pero detallando todos aquéllos cambios, en los parámetros clave de las opciones de configuración, que veremos dadas las diferencias que existen entre una tarea periódica y una diferida.
 
 ![](files/w7/p1.png)
+
+En este caso, definiremos en la pestaña ´desencadenadores´ que la tarea se ejecute diariamente a una hora, y que se repite cada día:
 
 ![](files/w7/p2.png)
 
 ![](files/w7/p3.png)
 
+En `Acciones` le decimos que queremos mostrar un mensaje, y en el campo título y Mensaje introducimos lo que queremos que se muestre. En este caso hemos definido un aviso para acordarnos de que tenemos que "recoger al niño" y el tiempo del que disponemos:
+
 ![](files/w7/p4.png)
 
 ![](files/w7/p5.png)
 
-![](files/w7/p6.png)
-
-![](files/w7/p7.png)
+Hemos esperado nuevamente a llegar a la hora desencadenante de la tarea para ver el resultado de nuestra tarea:
 
 ![](files/w7/p8.png)
-
 
 ### 3.4. Tarea Programada Asíncrona
 
