@@ -113,7 +113,7 @@ Un ejemplo sería:
 * * `0 0 * * * tar -czf docs-'date -I'.tar.gz /home/antonio/documentos/`
 
 Si queremos definir una tarea periódica para todo el sistema, existe un fichero del que sólo puede hacer uso el usuario `root` destinado a tal fin; el fichero `/etc/crontab`.
-Editándolo de forma manual podemos introducir en él las tareas que queremos definir. Este fichero tiene la misma sintáxis específica que en el caso del comando, con la salvedad que después de los parámetros de tiempo agregaremos `root` como un campo más, para en el siguiente poner el comando a ejecutar.
+Editándolo de forma manual podemos introducir en él las tareas que queremos definir. Este fichero tiene la misma sintáxis específica que en el caso del comando, con la salvedad de que después de los parámetros de tiempo agregaremos `root` como un campo más, para en el siguiente poner el comando a ejecutar.
 
 En nuestro caso hemos optado por hacer uso de esta última opción para definir una tarea periódica del sistema.
 
@@ -125,7 +125,9 @@ En la captura podemos ver que se genera un script con el nombre `tareaperiodica.
 	date >> /home/antonio/cron.log
 ```
 
-Le damos permisos de ejecución y lo ejecutamos previamente para ver que funciona correctamente:
+Para luego darle permisos de ejecución y lanzarlo desde la terminal para comprobar previamente que funciona de forma correcta:
+
+![](files/suse/p01.png)
 
 ![](files/suse/p00.png)
 
