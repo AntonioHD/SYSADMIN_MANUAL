@@ -291,16 +291,24 @@ Volviendo al "Programador de tareas", vamos a seguir los mismos pasos que los re
 
 ![](files/w7/a2.png)
 
+Semanalmente los domingos a las 12:00:
+
 ![](files/w7/a3.png)
+
+Que se inicie el script `.bat` con ruta `C:\scripst_tareas\backup.bat`:
 
 ![](files/w7/a4.png)
 
 ![](files/w7/a5.png)
 
+Con la condición de inactividad durante 15 minutos:
+
 ![](files/w7/a6.png)
+
+Y que se ejecute lo antes posible si no hubo un inicio programado:
 
 ![](files/w7/a7.png)
 
-![](files/w7/a8.png)
+Por último hemos querido analizar la ventana donde se muestran todas las tareas que hemos definido para entender mejor los datos que muestra. Vemos el nombre y la descripción de la tarea, el estado en el que se encuentra (si ya se ejecutó, se va a ejecutar o si está en ejecución), la hora de próxima ejecución y las veces que se ha ejecutado, y la autoría y fecha de creación de la tarea.
 
 ![](files/w7/xx.png)
