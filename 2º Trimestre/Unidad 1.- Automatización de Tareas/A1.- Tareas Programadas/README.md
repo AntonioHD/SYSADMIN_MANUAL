@@ -200,15 +200,10 @@ Como en el punto anterior con el sistema operativo OpenSUSE 13.2, partiremos de 
 
 ### 3.2. Tarea Programada Diferida
 
-En Windows 7 para abrir el programador de tareas hacemos Panel de control -> Herramientas administrativas -> Programador de tareas.
-
+Una vez abierto el `Programador de tareas`, hacemos click sobre "crear una tarea..." que podemos encontrar en el menú "Acciones" para que se abra el asistente y comenzar a definir nuestra tarea programada:
 
 
 ![](files/w7/01.png)
-
-
-
-***
 
 
 ![](files/w7/d1.png)
