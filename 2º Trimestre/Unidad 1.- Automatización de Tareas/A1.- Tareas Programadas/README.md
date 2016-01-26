@@ -305,7 +305,13 @@ Con la condición de inactividad durante 15 minutos:
 
 ![](files/w7/a6.png)
 
-Y que se ejecute lo antes posible si no hubo un inicio programado:
+* Que se ejecute lo antes posible si no hubo un inicio programado.
+
+* Si no se ejecute que se reinicie cada 5 minutos.
+
+* Que se intente un máximo de 100 veces.
+
+* Y que se dentenga al cabo de 3 días.
 
 ![](files/w7/a7.png)
 
