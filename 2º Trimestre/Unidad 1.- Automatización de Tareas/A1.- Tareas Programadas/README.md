@@ -134,7 +134,7 @@ Ahora, editamos el fichero `/etc/crontab` para agregar las siguientes líneas:
 * `#TAREA PROGRAMADA PARA EJECUTARSE CADA 5 MIN`
 * `0-59/5 * * * * root /home/antonio/Documentos/tareaperiodica.sh`
 
-Si nos fijamos en el primer campo de la 2º línea que hemos introducido (campo minutos), podemos ver que se ha definido para que se ejecute cada 5 minutos de reloj, dividiendo el total de minutos (0-59) entre 5. Con lo cual se ejecutará 12 veces por hora, a todas horas, todos los días, todos los meses y todos los años; puesto que hemos puesto * en el resto de campos.
+Si nos fijamos en el primer campo de la 2º línea que hemos introducido (campo minutos), podemos ver que se ha definido para que se ejecute cada 5 minutos de reloj, dividiendo el total de minutos (0-59) entre 5 --> `0-59/5`. Con lo cual se ejecutará 12 veces por hora, a todas horas, todos los días, todos los meses y todos los años; puesto que hemos puesto `*` en el resto de campos.
 
 ![](files/suse/p04b.png)
 
@@ -146,6 +146,21 @@ Si nos vamos ahora al fichero `/home/antonio/cron.log`, en el que el script va a
 
 ### 2.4. Tarea Programada Asíncrona
 
+Como en los casos anteriores, volvemos a crear un script llamado esta vez `tareaasincrona.sh`, en el que meteremos el siguiente código:
+
+```
+#!/bin/sh
+	#Mostrar mensaje en pantalla
+	DISPLAY=:0
+	export DISPLAY
+	zenity --info --text="Tarea ejecutada"
+```
+
+Para esta tarea prentendemos hacer uso de la herramienta `zenity`, la cual nos proporciona una ventana en la que definir el texto que queramos, como hemos hecho en el script, y mostrarla en pantalla.
+
+![](files/suse/zen2.png)
+
+![](files/suse/zen3.png)
 
 ![](files/suse/as00.png)
 
