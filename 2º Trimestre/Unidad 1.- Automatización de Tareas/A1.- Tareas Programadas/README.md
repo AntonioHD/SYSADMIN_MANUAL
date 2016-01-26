@@ -162,6 +162,15 @@ Hemos ejecutado el script para comprobar que funciona correctamente:
 
 ![](files/suse/zen.png)
 
+Una vez que hemos lanzado el script para ver su funcionamiento, vamos a alojar el fichero de éste en la carpeta `/etc/con.hourly` para que se ejecute de forma asíncrona cada hora.
+
+Las carpetas de la herramienta `cron` para este tipo de tareas son:
+
+* cron.hourly Para las tareas en períodos de 60 minutos
+* cron.daily Para tareas diarias
+* cron.monthly Para tareas mensuales
+* cron.weekly Para tareas semanales
+
 ![](files/suse/as00.png)
 
 
