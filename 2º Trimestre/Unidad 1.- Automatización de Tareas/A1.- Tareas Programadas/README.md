@@ -156,7 +156,9 @@ Como en los casos anteriores, volvemos a crear un script llamado esta vez `tarea
 	zenity --info --text="Tarea ejecutada"
 ```
 
-Para esta tarea prentendemos hacer uso de la herramienta `zenity`, la cual nos proporciona una ventana en la que definir el texto que queramos, como hemos hecho en el script, y mostrarla en pantalla.
+Para esta tarea prentendemos hacer uso de la herramienta `zenity`, que hemos instalado previamente, y con la que podemos definir una ventana en la que hemos establecido el texto que va a contener, como hemos hecho en el script, para luego mostrarla en pantalla.
+
+Hemos ejecutado el script para comprobar que funciona correctamente:
 
 ![](files/suse/zen.png)
 
