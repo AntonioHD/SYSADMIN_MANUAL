@@ -180,29 +180,33 @@ Las carpetas de la herramienta `cron` para este tipo de tareas son:
 
 Para definir tareas programadas en Windows, emplearemos la herramienta administrativa `Programador de Tareas` que podemos encontrar en "Panel de control -> Herramientas administrativas -> Programador de tareas".
 
+![](files/w7/00.png)
+
 Para éste sistema se emplea un entorno gráfico, diferenciándose drásticamente con respecto a la programación de tareas en los sistemas GNU/Linux.
 
 ### 3.1. Configuraciones Previas
 
-IP: 172.18.9.11
-Nombre de equipo: hernandez1
-Máscara de red: 255.255.0.0
-Gateway: 172.18.0.1
-Servidor DNS: 8.8.4.4
-Grupo de trabajo: AULA108
-Tarjeta de red VBox en modo puente.
+Como en el punto anterior con el sistema operativo OpenSUSE 13.2, partiremos de la configuración del sistema Windows con los siguientes parámetros:
 
+* IP: 172.18.9.11
+* Nombre de equipo: hernandez1
+* Máscara de red: 255.255.0.0
+* Gateway: 172.18.0.1
+* Servidor DNS: 8.8.4.4
+* Grupo de trabajo: AULA108
+* Tarjeta de red VBox en modo puente.
+
+![](files/w7/02.png)
 
 ### 3.2. Tarea Programada Diferida
 
 En Windows 7 para abrir el programador de tareas hacemos Panel de control -> Herramientas administrativas -> Programador de tareas.
 
 
-![](files/w7/00.png)
 
 ![](files/w7/01.png)
 
-![](files/w7/02.png)
+
 
 ***
 
