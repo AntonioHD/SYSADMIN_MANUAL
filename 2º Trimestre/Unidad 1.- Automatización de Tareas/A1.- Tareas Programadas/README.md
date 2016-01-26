@@ -11,24 +11,24 @@
 
 ## 1. Introducción
 
-	En la práctica planteada para comenzar esta 4.ª unidad, la cual trata sobre la **"Automatización de Tareas"**, hemos definido una serie de procesos que se ejecutarán de forma autónomo con base a unos parámetros o condiciones de tiempo preestablecidos.
+En la práctica planteada para comenzar esta 4.ª unidad, la cual trata sobre la **"Automatización de Tareas"**, hemos definido una serie de procesos que se ejecutarán de forma autónomo con base a unos parámetros o condiciones de tiempo preestablecidos.
 
-	Dichos procesos, denominados "Tareas Programadas", son susceptibles de ser clasificados según la condición de tiempo a la que obedezcan en 3 grupos bien diferenciados, siendo éstos los siguientes:
+Dichos procesos, denominados "Tareas Programadas", son susceptibles de ser clasificados según la condición de tiempo a la que obedezcan en 3 grupos bien diferenciados, siendo éstos los siguientes:
 
-	* **Tareas programadas diferidas**
+* **Tareas programadas diferidas**
 
-	Éstas basan su condición de tiempo en el momento exacto que nosotros definamos, es decir, si queremos que se ejecute un proceso un día, hora o minuto concreto, y sólo una única vez, emplearemos éste tipo de tarea programada.
+Éstas basan su condición de tiempo en el momento exacto que nosotros definamos, es decir, si queremos que se ejecute un proceso un día, hora o minuto concreto, y sólo una única vez, emplearemos éste tipo de tarea programada.
 
-	* **Tareas programadas periódicas**
+* **Tareas programadas periódicas**
 
-	Si queremos que una tarea se realice "periódicamente", ya sea cada mes, semana, día, etc... haremos uso de éste grupo de tareas. Un ejemplo muy común es el programado de una tarea de copia de seguridad o análisis de virus que se ejecute, por ejemplo, todos los domingos del mes.
+Si queremos que una tarea se realice "periódicamente", ya sea cada mes, semana, día, etc... haremos uso de éste grupo de tareas. Un ejemplo muy común es el programado de una tarea de copia de seguridad o análisis de virus que se ejecute, por ejemplo, todos los domingos del mes.
 
-	* **Tareas programadas asíncronas**
+* **Tareas programadas asíncronas**
 
-	En caso de que no tengamos claro el momento exacto pero sí el perido de tiempo en el que queremos que se ejecute (o se vuelva a ejecutar) un proceso, utilizaremos las tareas asíncronas. Éstas se definen siguiendo el mismo esquema que en las periódicas con la salvedad de que no se especficará un momento exacto de ejecución, sino que le diremos el periodo comprendido entre una ejecución y la siguiente y ésta se realizará en el momento que pueda, teniendo en cuenta dicho periodo.
+En caso de que no tengamos claro el momento exacto pero sí el perido de tiempo en el que queremos que se ejecute (o se vuelva a ejecutar) un proceso, utilizaremos las tareas asíncronas. Éstas se definen siguiendo el mismo esquema que en las periódicas con la salvedad de que no se especficará un momento exacto de ejecución, sino que le diremos el periodo comprendido entre una ejecución y la siguiente y ésta se realizará en el momento que pueda, teniendo en cuenta dicho periodo.
 
 
-	Par terminar esta parte introductoria cabe decir que hemos empleado un sistema operativo GNU/Linux, en concreto OpenSUSE 13.2, y un sistema operativo Windows 7 Enterprise; en los cuales hemos planificado 3 tareas programadas para cada sistema, contemplando para ello el hacer uso de una de cada tipo, cubriendo así todas las posibilidades para ambos sistemas.
+Par terminar esta parte introductoria cabe decir que hemos empleado un sistema operativo GNU/Linux, en concreto OpenSUSE 13.2, y un sistema operativo Windows 7 Enterprise; en los cuales hemos planificado 3 tareas programadas para cada sistema, contemplando para ello el hacer uso de una de cada tipo, cubriendo así todas las posibilidades para ambos sistemas.
 
 
 ## 2. Tareas Programadas en OpenSUSE
