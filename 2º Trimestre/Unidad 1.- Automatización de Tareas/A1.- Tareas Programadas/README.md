@@ -200,19 +200,33 @@ Como en el punto anterior con el sistema operativo OpenSUSE 13.2, partiremos de 
 
 ### 3.2. Tarea Programada Diferida
 
-Una vez abierto el `Programador de tareas`, hacemos click sobre "crear una tarea..." que podemos encontrar en el menú "Acciones" para que se abra el asistente y comenzar a definir nuestra tarea programada:
+Comenzaremos a ver el uso de la herramienta "Programador de tareas" con la creación de una tarea programada diferida que se encargue de apagar el sistema.
 
+Una vez abierto el `Programador de tareas`, hacemos click sobre "crear una tarea...", opción que podemos encontrar en el menú "Acciones" para que se abra el asistente y comenzar a definir nuestra tarea programada:
 
 ![](files/w7/01.png)
 
+Vemos que la ventana que nos aparece del asistente tiene 5 pestañas, por la que iremos pasando una a una para definir nuestra tarea.
+
+En la pestaña `General` le damos un nombre a nuestra tarea, una descripción, y especificamos si queremos que se ejecute "sólo cuando el usuario haya iniciado sesión" o "tanto si ha iniciado o no". En este caso, como vamos a definir una tarea diferida que ejecutaremos en apenas unos minutos dejaremos la primera. 
 
 ![](files/w7/d1.png)
 
+En la pestaña `desencadenadores` hacemos click en el botón "nuevo" para definir cómo y cuando se va a ejecutar la tarea en cuestión. Para éste caso vamos a iniciar la tarea "Según una programación", la cual consisitirá en que la tarea se ejecute una única vez, y que sea el día 20/01/2016 a las 9:40:06.
+
+En el apartado de "configuración avanzada" se amplian las opciones al punto de, poder elegir el retraso para la ejecución de la tarea, si queremos que esta se repita cada cierto tiempo o si queremos que se detenga con base a un número de ejecuciones, y si debe expirar o no al cabo de una fecha y hora.
+
+Una vez que la tengamos damos en aceptar y continuamos:
+
 ![](files/w7/d2.png)
 
-![](files/w7/d3.png)
+En la pestaña "Acciones" hacemos lo mismo que en la anterior, elegiendo ahora el tipo de acción que queremos que se produzca cuando se den los parámetros "desencadenantes" de nuestra tarea.
 
-![](files/w7/d4.png)
+Hemos elegido la opción "iniciar un programa" donde hemos definido que éste sea el comando "shutdown" cpn los parámetros "/s"
+
+![](files/w7/d03.png)
+
+![](files/w7/d04.png)
 
 ![](files/w7/d5.png)
 
