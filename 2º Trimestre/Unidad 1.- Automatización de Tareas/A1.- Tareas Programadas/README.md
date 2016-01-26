@@ -44,36 +44,46 @@ Par terminar esta parte introductoria cabe decir que hemos empleado un sistema o
 * Nombre de dominio: dominguez
 * Tarjeta de red VBox en modo puente.
 
-
-
-### 2.2. Tarea Programada Diferida
-
-### 2.3. Tarea Programada Periódica
-
-### 2.4. Tarea Programada Asíncrona
-
-
-
 ![](files/suse/a01.png)
 
 ![](files/suse/a02.png)
 
+### 2.2. Tarea Programada Diferida
+
+
 ![](files/suse/a03.png)
 
 ![](files/suse/a04.png)
-
-![](files/suse/a05.png)
-
-![](files/suse/a06.png)
 
 ![](files/suse/a07.png)
 
 ![](files/suse/a08.png)
 
 
-* * *
+### 2.3. Tarea Programada Periódica
+
+![](files/suse/p00.png)
+
+![](files/suse/p01.png)
+
+![](files/suse/p02.png)
+
+![](files/suse/p03.png)
+
+![](files/suse/p04.png)
+
+![](files/suse/p04b.png)
+
+![](files/suse/p04c.png)
+
+
+### 2.4. Tarea Programada Asíncrona
+
 
 ![](files/suse/as00.png)
+
+
+* * *
 
 ## 3. Tareas Programadas en Windows 7 Enterprise
 
@@ -92,8 +102,6 @@ Tarjeta de red VBox en modo puente.
 ### 3.2. Tarea Programada Diferida
 
 En Windows 7 para abrir el programador de tareas hacemos Panel de control -> Herramientas administrativas -> Programador de tareas.
-
-
 
 
 ![](files/w7/00.png)
