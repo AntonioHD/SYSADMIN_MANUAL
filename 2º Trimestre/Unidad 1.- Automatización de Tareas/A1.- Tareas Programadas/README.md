@@ -160,8 +160,6 @@ Para esta tarea prentendemos hacer uso de la herramienta `zenity`, la cual nos p
 
 ![](files/suse/zen2.png)
 
-![](files/suse/zen3.png)
-
 ![](files/suse/as00.png)
 
 
