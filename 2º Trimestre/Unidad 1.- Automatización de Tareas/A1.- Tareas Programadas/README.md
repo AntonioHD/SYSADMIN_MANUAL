@@ -66,7 +66,7 @@ Ahora sí, configuraremos una primera tarea programada de tipo `diferida` que se
 		sudo shutodwn
 ```
 
-Luego, para lanzar la tarea programada escribiremos `at` <el momento en el que queremos que se ejecute> < <y el nombre o ruta del script a ejecutar>; en nuestro caso quedaría de la siguiente manera `at 08:35am today < tareadiferida.sh`. Nos aparecerá un mensaje de tipo "Warning" con el aviso de que se ejecutará el script en cuestión, donde especificará en la siguiente línea la fecha y hora de dicha ejecución.
+Luego, para lanzar la tarea programada escribiremos `at` --> |el momento en el que queremos que se ejecute| y |el nombre o ruta del script a ejecutar|; en nuestro caso quedaría de la siguiente manera `at 08:35am today < tareadiferida.sh`. Nos aparecerá un mensaje de tipo "Warning" con el aviso de que se ejecutará el script en cuestión, donde especificará en la siguiente línea la fecha y hora de dicha ejecución.
 
 
 ![](files/suse/a03.png)
