@@ -27,27 +27,6 @@ Esto resulta interesante si pensamos en los problemas con los que nos encontramo
 En la práctica planteada, y con idea de solventar todos los inconvenientes ya mencionados, vamos a hacer uso de un **gestor de o herramienta de gestión de configuraciones centralizada**.
 
 
-para comenzar esta 4.ª unidad, la cual trata sobre la **"Automatización de Tareas"**, hemos definido una serie de procesos que se ejecutarán de forma autónoma con base a unos parámetros o condiciones de tiempo preestablecidos.
-
-Dichos procesos, denominados **"Tareas Programadas"**, son susceptibles de ser clasificados según la condición de tiempo a la que obedezcan, dando como resultado 3 grupos bien diferenciados, siendo éstos los siguientes:
-
-* **Tareas programadas diferidas**
-
-Éstas basan su condición de tiempo en el momento exacto que nosotros definamos, es decir, si queremos que se ejecute un proceso un día, hora o minuto concreto, y sólo una única vez, emplearemos éste tipo de tarea programada.
-
-* **Tareas programadas periódicas**
-
-Si queremos que una tarea se realice "periódicamente", ya sea cada mes, semana, día, etc... haremos uso de éste grupo de tareas. Un ejemplo muy común es el programado de una tarea de copia de seguridad o análisis de virus que se ejecute, por ejemplo, todos los domingos del mes.
-
-* **Tareas programadas asíncronas**
-
-En caso de que no tengamos claro el momento exacto pero sí el periodo de tiempo en el que queremos que se ejecute (o se vuelva a ejecutar) un proceso, utilizaremos las tareas asíncronas. Éstas se definen siguiendo el mismo esquema que en las periódicas con la salvedad de que no se especficará un momento exacto de ejecución, sino que le diremos el periodo comprendido entre una ejecución y la siguiente, y ésta se realizará en el momento que pueda, teniendo en cuenta dicho periodo.
-
-Dichas tareas pueden basarse en la ejecución de un programa que tengamos instalado en nuestro sistema o en ejecutar un script que nosotros mismos elaboremos y que en él se recojan los procesos que creamos convenientes, según la tarea que prentendamos definir.
-
-Para terminar esta parte introductoria cabe decir que hemos empleado un sistema operativo GNU/Linux, en concreto OpenSUSE 13.2, y un sistema operativo Windows 7 Enterprise; en los cuales hemos planificado 3 tareas programadas para cada sistema, contemplando para ello el hacer uso de una de cada tipo, cubriendo así todas las posibilidades para ambos sistemas.
-
-
 ## 2. Tareas Programadas en OpenSUSE
 
 Empezaremos definiendo las tareas programadas en OpenSUSE, empleando para ello los comandos `at` para las tareas diferidas, el fichero `/etc/crontab` para las tareas periódicas y, para las tareas asíncronas, las carpetas `cron` --> `cron.hourly`, `cron.daily` y `cron.monthly`.
@@ -66,7 +45,46 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 
 Vemos los parámetros previos definidos:
 
-![](files/suse/a01.png)
+
+![](screenshots/master/MASTER.png)
+
+![](screenshots/master/hostlinux.pp)
+
+![](screenshots/master/host_cli1.png)
+
+![](screenshots/master/host_master.png)
+
+![](screenshots/master/master_01.png)
+
+![](screenshots/master/master_02.png)
+
+![](screenshots/master/master_03.png)
+
+![](screenshots/master/master_04.png)
+
+![](screenshots/master/master_05.png)
+
+![](screenshots/master/master_06.png)
+
+![](screenshots/master/master_06b.png)
+
+![](screenshots/master/master_07.png)
+
+![](screenshots/master/master_08.png)
+
+![](screenshots/master/master_09.png)
+
+![](screenshots/master/master_10.png)
+
+![](screenshots/master/master_11.png)
+
+![](screenshots/master/master_win_12.png)
+
+![](screenshots/master/master_win_13.png)
+
+![](screenshots/master/master_win_13b.png)
+
+![](screenshots/master/master_win_14.png)
 
 ### 2.2. Tarea Programada Diferida
 
