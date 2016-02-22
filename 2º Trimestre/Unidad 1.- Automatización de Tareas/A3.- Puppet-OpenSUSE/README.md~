@@ -26,10 +26,16 @@ Esto resulta interesante si pensamos en los problemas con los que nos encontramo
 
 En la práctica planteada, y con idea de solventar todos los inconvenientes ya mencionados, vamos a hacer uso de un **gestor de o herramienta de gestión de configuraciones centralizada**.
 
+DEFINICIÓN GESTOR DE CONFIGURACIONES CENTRALIZADA
+
+
+Para ésta tarea haremos uso de 3 máquinas de las cuáles; 2 tendrán un sistema operativo GNU/Linux cuya distribución será OpenSUSE 13.2--donde una hará de master y la otra de cliente--, y 1 última máquina cliente con Windows 7.
 
 ## 2. Máquina Master OpenSUSE
 
-Empezaremos definiendo las tareas programadas en OpenSUSE, empleando para ello los comandos `at` para las tareas diferidas, el fichero `/etc/crontab` para las tareas periódicas y, para las tareas asíncronas, las carpetas `cron` --> `cron.hourly`, `cron.daily` y `cron.monthly`.
+Para la máquina master, empezaremos definiendo los parámetros de red y nombres de host necesarios para que las 3 máquinas se comuniquen haciendo uso de sus nombres de host. Para ello, editaremos el archivo con ruta `/etc/hosts` donde definimos, asociándo las direcciones IPv4, los nombres que tienen las máquinas.
+
+Luego pasaremos a montar nuestro **gestor de configuraciones centralizado** ´PUPPET´ 
 
 ### 2.1. Configuraciones Previas
 
@@ -50,17 +56,24 @@ Vemos los parámetros previos definidos:
 ### 3.1. Configuraciones Previas
 ### 3.2. Comprobaciones de las Configuraciones
 ### 3.3. Instalación del cliente Puppet y Certificados
-### 3.4. Primera versión del fichero pp (hostlinux1.pp)
-### 3.5. Segunda versión del fichero pp (hostlinux2.pp)
+### 3.4. Primera versión del fichero pp
+#### 3.4.1. Fichero hostlinux1.pp
+#### 3.4.2. Fichero site.pp
+### 3.5. Segunda versión del fichero pp
+#### 3.5.1. Fichero hostlinux2.pp
+#### 3.5.2. Fichero site.pp
 
 ## 4. Máquina CLiente Windows 7
 
 ### 4.1. Configuraciones Previas
 ### 4.2. Comprobaciones de las Configuraciones
 ### 4.3. Instalación del cliente Puppet y Certificados
-### 4.4. Tercera versión del fichero pp (hostwindows3.pp)
+### 4.4. Tercera versión del fichero pp
+#### 4.4.1. Fichero hostwindows3.pp
+#### 4.4.2. Fichero site.pp
 ### 4.5. Cuarta versión del fichero pp (hostwindows4.pp)
-
+#### 4.5.1. Fichero hostwindows4.pp
+#### 4.5.2. Fichero site.pp
 
 ![](screenshots/master/MASTER.png)
 
