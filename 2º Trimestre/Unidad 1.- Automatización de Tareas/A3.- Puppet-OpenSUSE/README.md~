@@ -97,13 +97,31 @@ Vemos los parámetros previos definidos:
 
 ### 3.3. Instalación del cliente Puppet y Certificados
 ### 3.4. Primera versión del fichero pp
-#### 3.4.1. Fichero hostlinux1.pp
-#### 3.4.2. Fichero site.pp
+#### 3.4.1. Ficheros hostlinux1.pp y site.pp
+
+![](screenshots/master/master_05.png)
+
+![](screenshots/master/master_06.png)
+
+![](screenshots/master/master_06b.png)
+
+![](screenshots/master/master_07.png)
+
+![](screenshots/master/master_08.png)
+
+
 #### 3.4.3. Comprobación primer fichero pp
 
+
 ### 3.5. Segunda versión del fichero pp
-#### 3.5.1. Fichero hostlinux2.pp
-#### 3.5.2. Fichero site.pp
+#### 3.5.1. Ficheros hostlinux2.pp y site.pp
+
+![](screenshots/master/master_09.png)
+
+![](screenshots/master/master_10.png)
+
+![](screenshots/master/master_11.png)
+
 #### 3.5.3. Comprobación segundo fichero pp
 
 ## 4. Máquina CLiente Windows 7
@@ -139,24 +157,6 @@ Vemos los parámetros previos definidos:
 
 
 
-
-
-
-![](screenshots/master/master_05.png)
-
-![](screenshots/master/master_06.png)
-
-![](screenshots/master/master_06b.png)
-
-![](screenshots/master/master_07.png)
-
-![](screenshots/master/master_08.png)
-
-![](screenshots/master/master_09.png)
-
-![](screenshots/master/master_10.png)
-
-![](screenshots/master/master_11.png)
 
 ![](screenshots/master/master_win_12.png)
 
