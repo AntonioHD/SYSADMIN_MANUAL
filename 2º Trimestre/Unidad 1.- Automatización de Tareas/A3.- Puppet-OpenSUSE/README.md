@@ -29,32 +29,59 @@ En la práctica planteada, y con idea de solventar todos los inconvenientes ya m
 DEFINICIÓN GESTOR DE CONFIGURACIONES CENTRALIZADA
 
 
-Para ésta tarea haremos uso de 3 máquinas de las cuáles; 2 tendrán un sistema operativo GNU/Linux cuya distribución será OpenSUSE 13.2--donde una hará de master y la otra de cliente--, y 1 última máquina cliente con Windows 7.
+Para ésta tarea haremos uso de 3 máquinas de las cuáles; 2 tendrán un sistema operativo GNU/Linux cuya distribución será OpenSUSE 13.2 --donde una hará de master y la otra de cliente-- , y 1 última máquina cliente con Windows 7.
 
 ## 2. Máquina Master OpenSUSE
 
-Para la máquina master, empezaremos definiendo los parámetros de red y nombres de host necesarios para que las 3 máquinas se comuniquen haciendo uso de sus nombres de host. Para ello, editaremos el archivo con ruta `/etc/hosts` donde definimos, asociándo las direcciones IPv4, los nombres que tienen las máquinas.
+Para la máquina master, empezaremos definiendo los parámetros de red y nombres de host necesarios para que las 3 máquinas se comuniquen haciéndo uso de sus nombres de host. Para ello, editaremos el archivo con ruta `/etc/hosts` donde definimos, asociándo las direcciones IPv4, los nombres que tienen las máquinas.
 
-Luego pasaremos a montar nuestro **gestor de configuraciones centralizado** `PUPPET` 
+Luego pasaremos a montar nuestro **gestor de configuraciones centralizado** `PUPPET`, y a ver las distintas configuraciones que necesitamos establecer para su funcionamiento. De entre estas, destacaremos las referidas a los ficheros en los que alojamos las órdenes que se traducirán posteriormente en los clientes Puppet.
 
 ### 2.1. Configuraciones Previas
 
-Siguiendo los parámetros definidos en el esquema que vemos a continuación vamos a configurar nuestra máquina:
+Siguiendo los parámetros definidos en el esquema que vemos a continuación vamos a configurar nuestra máquina master:
 
-* IP: 172.18.9.51
+* IP: 172.18.9.100
 * Máscara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
-* Nombre de equipo: hernandez3
-* Nombre de dominio: dominguez
+* Nombre de equipo: master09
+* Nombre de dominio: hernandez
 * Tarjeta de red VBox en modo puente.
 
 Vemos los parámetros previos definidos:
 
+### 2.2. Comprobaciones de las Configuraciones
+
+![](screenshots/master/hostlinux.pp)
+
+![](screenshots/master/host_cli1.png)
+
+![](screenshots/master/host_master.png)
+
+![](screenshots/master/master_01.png)
+
+
 ## 3. Máquina Cliente OpenSUSE
 
+
 ### 3.1. Configuraciones Previas
+
+Siguiendo los parámetros definidos en el esquema que vemos a continuación vamos a configurar nuestra máquina cliente OpenSUSE:
+
+
+* IP: 172.18.9.101
+* Máscara de red: 255.255.0.0
+* Gateway: 172.18.0.1
+* Servidor DNS: 8.8.4.4
+* Nombre de equipo: cli2alu09
+* Nombre de dominio: hernandez
+* Tarjeta de red VBox en modo puente.
+
 ### 3.2. Comprobaciones de las Configuraciones
+
+Vemos los parámetros previos definidos:
+
 ### 3.3. Instalación del cliente Puppet y Certificados
 ### 3.4. Primera versión del fichero pp
 #### 3.4.1. Fichero hostlinux1.pp
@@ -66,7 +93,22 @@ Vemos los parámetros previos definidos:
 ## 4. Máquina CLiente Windows 7
 
 ### 4.1. Configuraciones Previas
+
+Siguiendo los parámetros definidos en el esquema que vemos a continuación vamos a configurar nuestra máquina cliente OpenSUSE:
+
+
+* IP: 172.18.9.102
+* Máscara de red: 255.255.0.0
+* Gateway: 172.18.0.1
+* Servidor DNS: 8.8.4.4
+* Nombre de equipo: cli2alu09
+* Nombre de dominio: hernandez
+* Tarjeta de red VBox en modo puente.
+
 ### 4.2. Comprobaciones de las Configuraciones
+
+Vemos los parámetros previos definidos:
+
 ### 4.3. Instalación del cliente Puppet y Certificados
 ### 4.4. Tercera versión del fichero pp
 #### 4.4.1. Fichero hostwindows3.pp
@@ -77,13 +119,7 @@ Vemos los parámetros previos definidos:
 
 ![](screenshots/master/MASTER.png)
 
-![](screenshots/master/hostlinux.pp)
 
-![](screenshots/master/host_cli1.png)
-
-![](screenshots/master/host_master.png)
-
-![](screenshots/master/master_01.png)
 
 ![](screenshots/master/master_02.png)
 
