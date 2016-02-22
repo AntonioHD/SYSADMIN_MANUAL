@@ -69,10 +69,9 @@ Vemos los parámetros previos definidos:
 
 ![](screenshots/master/master_03.png)
 
-![](screenshots/master/master_04.png)
-
 ![](screenshots/master/MASTER.png)
 
+![](screenshots/master/master_04.png)
 
 ## 3. Máquina Cliente OpenSUSE
 
@@ -98,6 +97,15 @@ Vemos los parámetros previos definidos:
 
 ### 3.3. Instalación del cliente Puppet y Certificados
 ### 3.4. Primera versión del fichero pp
+
+![](screenshots/master/master_05.png)
+
+![](screenshots/master/master_06.png)
+
+![](screenshots/master/master_06b.png)
+
+![](screenshots/master/master_07.png)
+
 #### 3.4.1. Fichero hostlinux1.pp
 #### 3.4.2. Fichero site.pp
 #### 3.4.3. Comprobación primer fichero pp
@@ -143,13 +151,7 @@ Vemos los parámetros previos definidos:
 
 
 
-![](screenshots/master/master_05.png)
 
-![](screenshots/master/master_06.png)
-
-![](screenshots/master/master_06b.png)
-
-![](screenshots/master/master_07.png)
 
 ![](screenshots/master/master_08.png)
 

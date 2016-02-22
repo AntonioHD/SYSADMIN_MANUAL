@@ -61,12 +61,17 @@ Vemos los parámetros previos definidos:
 
 ![](screenshots/master/master_01.png)
 
+![](screenshots/master/master_02.png)
+
 
 ### 2.3. Instalación Servidor Puppet
 
+
+![](screenshots/master/master_03.png)
+
 ![](screenshots/master/MASTER.png)
 
-
+![](screenshots/master/master_04.png)
 
 ## 3. Máquina Cliente OpenSUSE
 
@@ -87,6 +92,8 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 ### 3.2. Comprobaciones de las Configuraciones
 
 Vemos los parámetros previos definidos:
+
+
 
 ### 3.3. Instalación del cliente Puppet y Certificados
 ### 3.4. Primera versión del fichero pp
@@ -134,11 +141,6 @@ Vemos los parámetros previos definidos:
 
 
 
-![](screenshots/master/master_02.png)
-
-![](screenshots/master/master_03.png)
-
-![](screenshots/master/master_04.png)
 
 ![](screenshots/master/master_05.png)
 
