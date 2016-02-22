@@ -53,6 +53,20 @@ Vemos los parámetros previos definidos:
 
 ### 2.2. Comprobaciones de las Configuraciones
 
+![](screenshots/master/hostlinux.pp)
+
+![](screenshots/master/host_cli1.png)
+
+![](screenshots/master/host_master.png)
+
+![](screenshots/master/master_01.png)
+
+
+### 2.3. Instalación Servidor Puppet
+
+![](screenshots/master/MASTER.png)
+
+
 
 ## 3. Máquina Cliente OpenSUSE
 
@@ -78,9 +92,12 @@ Vemos los parámetros previos definidos:
 ### 3.4. Primera versión del fichero pp
 #### 3.4.1. Fichero hostlinux1.pp
 #### 3.4.2. Fichero site.pp
+#### 3.4.3. Comprobación primer fichero pp
+
 ### 3.5. Segunda versión del fichero pp
 #### 3.5.1. Fichero hostlinux2.pp
 #### 3.5.2. Fichero site.pp
+#### 3.5.3. Comprobación segundo fichero pp
 
 ## 4. Máquina CLiente Windows 7
 
@@ -105,19 +122,18 @@ Vemos los parámetros previos definidos:
 ### 4.4. Tercera versión del fichero pp
 #### 4.4.1. Fichero hostwindows3.pp
 #### 4.4.2. Fichero site.pp
+#### 4.4.3. Comprobación tercer fichero pp
+
+
+
 ### 4.5. Cuarta versión del fichero pp (hostwindows4.pp)
 #### 4.5.1. Fichero hostwindows4.pp
 #### 4.5.2. Fichero site.pp
+#### 4.5.3. Comprobación cuarto fichero pp
 
-![](screenshots/master/MASTER.png)
 
-![](screenshots/master/hostlinux.pp)
 
-![](screenshots/master/host_cli1.png)
 
-![](screenshots/master/host_master.png)
-
-![](screenshots/master/master_01.png)
 
 ![](screenshots/master/master_02.png)
 
