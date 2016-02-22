@@ -80,7 +80,7 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 * Máscara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
-* Nombre de equipo: cli2alu09
+* Nombre de equipo: cli1alu09
 * Nombre de dominio: hernandez
 * Tarjeta de red VBox en modo puente.
 
@@ -110,8 +110,7 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 * Máscara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
-* Nombre de equipo: cli2alu09
-* Nombre de dominio: hernandez
+* Nombre de equipo: cliente2alu09
 * Tarjeta de red VBox en modo puente.
 
 ### 4.2. Comprobaciones de las Configuraciones

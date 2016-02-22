@@ -61,11 +61,17 @@ Vemos los parámetros previos definidos:
 
 ![](screenshots/master/master_01.png)
 
+![](screenshots/master/master_02.png)
+
 
 ### 2.3. Instalación Servidor Puppet
 
-![](screenshots/master/MASTER.png)
 
+![](screenshots/master/master_03.png)
+
+![](screenshots/master/master_04.png)
+
+![](screenshots/master/MASTER.png)
 
 
 ## 3. Máquina Cliente OpenSUSE
@@ -80,13 +86,15 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 * Máscara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
-* Nombre de equipo: cli2alu09
+* Nombre de equipo: cli1alu09
 * Nombre de dominio: hernandez
 * Tarjeta de red VBox en modo puente.
 
 ### 3.2. Comprobaciones de las Configuraciones
 
 Vemos los parámetros previos definidos:
+
+
 
 ### 3.3. Instalación del cliente Puppet y Certificados
 ### 3.4. Primera versión del fichero pp
@@ -110,8 +118,7 @@ Siguiendo los parámetros definidos en el esquema que vemos a continuación vamo
 * Máscara de red: 255.255.0.0
 * Gateway: 172.18.0.1
 * Servidor DNS: 8.8.4.4
-* Nombre de equipo: cli2alu09
-* Nombre de dominio: hernandez
+* Nombre de equipo: cliente2alu09
 * Tarjeta de red VBox en modo puente.
 
 ### 4.2. Comprobaciones de las Configuraciones
@@ -135,11 +142,6 @@ Vemos los parámetros previos definidos:
 
 
 
-![](screenshots/master/master_02.png)
-
-![](screenshots/master/master_03.png)
-
-![](screenshots/master/master_04.png)
 
 ![](screenshots/master/master_05.png)
 
