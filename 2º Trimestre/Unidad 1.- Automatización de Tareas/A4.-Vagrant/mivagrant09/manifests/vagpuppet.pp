@@ -1,0 +1,3 @@
+package {'geany':
+	ensure=>'present',
+}
