@@ -21,9 +21,14 @@ Para poder comenzar con el desarrollo de éste texto se hace indispensable parti
 ## 2. Primeros Pasos con Vagrant
 ### 2.1. Instalación
 
+![](screenshots/gettingstarted.gif)
+
 ![](screenshots/00.png)
 
+
 ### 2.2. Creando un nuevo proyecto
+
+![](screenshots/boxdonwload.gif)
 
 ![](screenshots/01.png)
 
