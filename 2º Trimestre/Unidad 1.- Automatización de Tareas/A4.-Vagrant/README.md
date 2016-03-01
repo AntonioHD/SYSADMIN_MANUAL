@@ -17,13 +17,13 @@ Para poder comenzar con el desarrollo de éste texto se hace indispensable parti
 	
 >Vagrant es una herramienta para la creación y configuración de entornos de desarrollo virtualizados. Originalmente se desarrolló para VirtualBox y sistemas de configuración tales como Chef, Salt y Puppet. Sin embargo desde la versión 1.1 Vagrant es capaz de trabajar con múltiples proveedores, como VMware, Amazon EC2, LXC, DigitalOcean, etc.2 Aunque Vagrant se ha desarrollado en Ruby se puede usar en multitud de proyectos escritos en otros lenguajes, tales como PHP, Python, Java, C# y JavaScript.
 >
-	
+
 ## 2. Primeros Pasos con Vagrant
 
 En este apartado comenzaremos a ver los distintos pasos que debemos seguir para la instalación y puesta en marcha del software Vagrant; y que éste pueda trabajar junto a nuestra virtualizadora. 
 ### 2.1. Instalación
 
-Para empezar, descargamos el paquete adecuado desde la página oficial de ["HashiCorp"](https://www.vagrantup.com/downloads.html); según el sistema sobre el que lo vamos a instalar:
+Para empezar, descargamos el paquete adecuado desde la página oficial de [HashiCorp](https://www.vagrantup.com/downloads.html); según el sistema sobre el que lo vamos a instalar:
 ![](screenshots/00.png)
 
 ### 2.2. Creando un nuevo proyecto
@@ -31,7 +31,8 @@ Para empezar, descargamos el paquete adecuado desde la página oficial de ["Hash
 Una vez instalado, abrimos una terminal desde la que vamos a crear una carpeta para nuestro proyecto. Luego, lanzamos el comando `vagrant init` situándonos previamente en la carpeta creada. Con ésto se nos genera un fichero `Vagrantfile` con el que vamos a gestionar nuestro máquina:
 
 ![](screenshots/gettingstarted.gif)
-
+Nos aparecerá el siguiente mensaje informativo:
+
 ![](screenshots/01.png)
 
 Éste sería el aspecto
