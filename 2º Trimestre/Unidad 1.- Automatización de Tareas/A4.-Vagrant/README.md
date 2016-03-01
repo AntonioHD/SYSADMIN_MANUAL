@@ -59,9 +59,10 @@ Para arrancar la máquina tenemos que editar el fichero `Vagrantfile` y añadir 
 
 ![](screenshots/05.png)
 
+Una vez editado, lanzamos el comando `vagrant up` dentro de la carpeta donde tenemos el fichero `vagrantfile`:
 
+![](screenshots/06.png)
 
-![](screenshots/06.png)
 ![](screenshots/07.png)
 ![](screenshots/07b.png)
 
