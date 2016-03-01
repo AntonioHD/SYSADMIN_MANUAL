@@ -61,7 +61,7 @@ Para poder comenzar con el desarrollo de éste texto se hace indispensable parti
 
 ### 3.3. Otras Configuraciones
 
-## 4. Aprovisando nuestras máquinas
+## 4. Aprovisionando nuestras máquinas
 ### 4.1. Aprovisionamiento mediante script
 
 ![](screenshots/09.png)
