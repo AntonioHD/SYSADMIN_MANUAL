@@ -35,7 +35,7 @@ Una vez instalado, abrimos una terminal desde la que vamos a crear una carpeta p
 
 ![](screenshots/01.png)
 
-Éste sería el aspecto
+Éste sería el aspecto del fichero `Vagrantfile`:
 ![](screenshots/02.png)
 ### 2.3. Obtención de un Box (imagen o caja)
 
