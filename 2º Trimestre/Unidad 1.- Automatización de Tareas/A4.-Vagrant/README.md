@@ -18,24 +18,31 @@ Para poder comenzar con el desarrollo de éste texto se hace indispensable parti
 >Vagrant es una herramienta para la creación y configuración de entornos de desarrollo virtualizados. Originalmente se desarrolló para VirtualBox y sistemas de configuración tales como Chef, Salt y Puppet. Sin embargo desde la versión 1.1 Vagrant es capaz de trabajar con múltiples proveedores, como VMware, Amazon EC2, LXC, DigitalOcean, etc.2 Aunque Vagrant se ha desarrollado en Ruby se puede usar en multitud de proyectos escritos en otros lenguajes, tales como PHP, Python, Java, C# y JavaScript.
 >
 	
-## 2. Primeros Pasos con Vagrant
-### 2.1. Instalación
-
-![](screenshots/gettingstarted.gif)
-
-![](screenshots/00.png)
-
-
-### 2.2. Creando un nuevo proyecto
-
-
+## 2. Primeros Pasos con Vagrant
+
+En este apartado comenzaremos a ver los distintos pasos que debemos seguir para la instalación y puesta en marcha del software Vagrant; y que éste pueda trabajar junto a nuestra virtualizadora. 
+### 2.1. Instalación
+
+Para empezar, descargamos el paquete adecuado desde la página oficial de "HashiCorp" https://www.vagrantup.com/downloads.html; según el sistema sobre el que lo vamos a instalar:
+![](screenshots/00.png)
+
+### 2.2. Creando un nuevo proyecto
+
+Una vez instalado, abrimos una terminal desde la que vamos a crear una carpeta para nuestro proyecto. Luego, lanzamos el comando `vagrant init` situándonos previamente en la carpeta creada:
+
+![](screenshots/gettingstarted.gif)
 
 ![](screenshots/01.png)
-
 ![](screenshots/02.png)
-
-### 2.3. Obtención de un Box (imagen o caja)
-
+### 2.3. Obtención de un Box (imagen o caja)
+
+Ahora, necesitamos obtener una imagen (caja, box) de un sistema operativo. Para ello, empleamos el comando `vagrant box add nombredelamaquina` y la ruta desde la que nos queremos descargar dicho box (esa ruta puede ser un enlace a un fichero en internet o a un fichero que tengamos en local).
+Por el momento vamos a descargarnos un box desde la página oficial de vagrant; el comando lanzado para nuestro box quedaría de la siguiente manera.
+
+`vagrant box add micaja09_ubuntu_precise32 http://files.vagrantup.com/precise32.box`
+
+Nota: Box, caja o imagen de vagrant; son los sistemas "pelados" que vamos a emplear como base de nuestra máquina virtual.
+
 ![](screenshots/boxdonwload.gif)
 
 ![](screenshots/03.png)
