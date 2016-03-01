@@ -44,31 +44,31 @@ Por el momento vamos a descargarnos un box desde la página oficial de vagrant; 
 
 `vagrant box add micaja09_ubuntu_precise32 http://files.vagrantup.com/precise32.box`
 
-Nota: Box, caja o imagen de vagrant; son los sistemas "pelados" que vamos a emplear como base de nuestra máquina virtual.
+>Nota: Box, caja o imagen de vagrant; son los sistemas "pelados" que vamos a emplear como base de nuestra máquina virtual.
+>
 
 ![](screenshots/boxdonwload.gif)
-
+Nos fijamos que al finalizarla ejecución del comando aparzca el mensaje siguiente con el nombre del `box` entre comillas. Es importante quedárnos con el nombre que le hemos dado para poder luego iniciar la máquina:
 ![](screenshots/03.png)
-
-![](screenshots/04.png)
-
-![](screenshots/05.png)
-
-### 2.4. Iniciando la máquina
-
+Vemos ahora, antes de seguir, el árbol de directorios que tenemos:
+![](screenshots/04.png)
+### 2.4. Iniciando la máquina
+
+En éste punto vamos a iniciar el box que nos hemos descargado, como una máquina virtual. Cabe decir que la virtuailzadora será `VirtualBox`, con vagrant sólo gestionamos las máquinas.
+Para arrancar la máquina tenemos que editar el fichero `Vagrantfile` y añadir el nombre del box que le habíamos dado cuando lo descargamos:
+
+![](screenshots/05.png)
+
+
+
 ![](screenshots/06.png)
-
 ![](screenshots/07.png)
-
-![](screenshots/07b.png)
-
+![](screenshots/07b.png)
+
 ## 3. Configurando Vagrant
 ### 3.1. Carpetas sincronizadas
 ### 3.2. Redireccionamiento de los puertos
-
-
 ![](screenshots/08.png)
-
 ### 3.3. Otras Configuraciones
 
 ## 4. Aprovisionando nuestras máquinas
