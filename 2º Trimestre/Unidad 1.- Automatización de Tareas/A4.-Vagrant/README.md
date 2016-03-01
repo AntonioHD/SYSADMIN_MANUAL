@@ -23,16 +23,18 @@ Para poder comenzar con el desarrollo de éste texto se hace indispensable parti
 En este apartado comenzaremos a ver los distintos pasos que debemos seguir para la instalación y puesta en marcha del software Vagrant; y que éste pueda trabajar junto a nuestra virtualizadora. 
 ### 2.1. Instalación
 
-Para empezar, descargamos el paquete adecuado desde la página oficial de "HashiCorp" https://www.vagrantup.com/downloads.html; según el sistema sobre el que lo vamos a instalar:
+Para empezar, descargamos el paquete adecuado desde la página oficial de ["HashiCorp"](https://www.vagrantup.com/downloads.html); según el sistema sobre el que lo vamos a instalar:
 ![](screenshots/00.png)
 
 ### 2.2. Creando un nuevo proyecto
 
-Una vez instalado, abrimos una terminal desde la que vamos a crear una carpeta para nuestro proyecto. Luego, lanzamos el comando `vagrant init` situándonos previamente en la carpeta creada:
+Una vez instalado, abrimos una terminal desde la que vamos a crear una carpeta para nuestro proyecto. Luego, lanzamos el comando `vagrant init` situándonos previamente en la carpeta creada. Con ésto se nos genera un fichero `Vagrantfile` con el que vamos a gestionar nuestro máquina:
 
 ![](screenshots/gettingstarted.gif)
 
-![](screenshots/01.png)
+![](screenshots/01.png)
+
+Éste sería el aspecto
 ![](screenshots/02.png)
 ### 2.3. Obtención de un Box (imagen o caja)
 
