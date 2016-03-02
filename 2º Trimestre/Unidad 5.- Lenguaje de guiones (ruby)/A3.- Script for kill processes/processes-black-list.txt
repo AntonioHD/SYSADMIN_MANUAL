@@ -1,0 +1,4 @@
+geany:remove
+firefox:r
+gimp:notify
+gnome-calculator:n
