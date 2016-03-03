@@ -33,7 +33,7 @@ list.each do |processesname|
 	if fields[1]=="remove" || fields[1]=="r"|| fields[1]=="kill"|| fields[1]=="k"
 	
 		#Comprobamos la situación del proceso, ¿está en ejecución?
-		search=`ps -ef| grep #{fields[0]}| grep -v color`
+		search=`ps -ef| grep #{fields[0]}| grep -v color| grep -v grep`
 	
 		#Spliteamos el resultado para sacar cada fila
 		searchpid=search.split("\n")
@@ -42,11 +42,11 @@ list.each do |processesname|
 		searchpid.each do |processespid|
 			processespid=processespid.split(" ")
 			
-			puts "El proceso "+Rainbow("#{processespid[1]}").color(:green)+" está en ejecución, procedemos a eliminarlo"
+			puts "El proceso "+Rainbow("#{processespid[7]}").color(:blue)+" cuyo PID es "+Rainbow("#{processespid[1]}").color(:green)+" está en ejecución, procedemos a eliminarlo"
 			
 			#Si el proceso en ejecución coincide con el que se pretende eliminar
 			if fields[0] == processespid[7] then
-				system("kill -9 PID #{processespid[1]}")
+				system("kill -9 pid #{processespid[1]}")
 			end
 			#Fin de la condición
 		end
@@ -55,7 +55,7 @@ list.each do |processesname|
 	#Fin de la condición
 	if fields[1]=="notify" || fields[1]=="n" then
 		#Comprobamos la situación del proceso, ¿está en ejecución?
-		search=`ps -ef| grep #{fields[0]}| grep -v color`
+		search=`ps -ef| grep #{fields[0]}| grep -v color| grep -v grep`
 	
 		#Spliteamos el resultado para sacar cada fila
 		searchpid=search.split("\n")
@@ -64,7 +64,7 @@ list.each do |processesname|
 		searchpid.each do |processespid|
 			processespid=processespid.split(" ")
 			
-			puts "El proceso "+Rainbow("#{processespid[1]}").color(:green)+" está en ejecución"
+			puts "El proceso "+Rainbow("#{processespid[7]}").color(:blue)+" cuyo PID es "+Rainbow("#{processespid[1]}").color(:green)+" está en ejecución"
 		end
 	
 	end
@@ -72,26 +72,3 @@ list.each do |processesname|
 end
 #Fin del iterador
 puts "FIN DEL SCRIPT"
-
-
-	#puts "El proceso "+{searchpid[1]}+" está en ejecución"
-	
-	#Si se especifica eliminarlo, comprobamops s primero si está en ejecución	
-	#if fields[1]=="remove" || fields[1]=="r"|| fields[1]=="kill"|| fields[1]=="k"
-	#	if search.count="" then
-	#		puts "El proceso "+fields[0]+" no está en ejecución"			
-	#	else
-	#		puts "El proceso "+fields[0]+" está en ejecución, procedemos a eliminarlo"
-	#		system("zypper --non-interactive rm #{fields[0]}")
-	#	end
-	
-	#si se especifica notificar el estado, comprobamos que la situación del proceso
-	#elsif fields[1]=="notify" || fields[1]=="n" then
-	#	if search.count="" then
-	#		puts "El proceso "+fields[0]+" está en ejecución"
-	#		system("zypper --non-interactive in #{fields[0]}")
-	#	else
-	#		puts "El programa "+fields[0]+" no está en ejecución"
-	#	end
-	#end
-#Fin del iterador

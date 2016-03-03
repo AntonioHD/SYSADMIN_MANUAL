@@ -1,4 +1,4 @@
-geany:remove
-firefox:r
-gimp:notify
+firefox:notify
+xfce4-notes:r
+gimp-2.8:kill
 gnome-calculator:n
