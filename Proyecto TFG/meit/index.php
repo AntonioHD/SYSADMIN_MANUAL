@@ -82,8 +82,8 @@
 						<li class=""><a class="page-scroll" href="#overview" tabindex="-1">Overview</a></li>
 						<li class=""><a class="page-scroll" href="#pricing" tabindex="-1">Pricing</a></li>
 						<li class=""><a class="page-scroll" href="#contact" tabindex="-1">Contact</a></li>
-						<li class="dropdown"><!--Dropdown to sign in form-->
-			             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In <b class="caret"></b></a>
+						<li class=""><a class="btn btn-lg botn" data-toggle="modal" data-target="#myModal">Sign In</a></li>
+			             <!--
 			             <ul class="dropdown-menu">
 			             	<li>
 			             	<div>
@@ -106,13 +106,44 @@
 				             </form>
 				        	</div>
 				        	</li>
-			             </ul>
-			          </li>
-					</ul>
+			            </ul>-->
+			          <!--  -->
+			        </ul>
 				</nav><!--/ Navigation end -->
 			</div><!--/ Row end -->
 		</div><!--/ Container end -->
 	</header><!--/ Header end -->
+	<div class="container" id="modal">
+        				<!-- Trigger the modal with a button
+        				 <button type="button" class="btn btn-lg botn" data-toggle="modal" data-target="#myModal" style="position:relative; bottom:5%; left:5%; width: 20vh !important; height: auto; font-size: 2vh;">Kontakt</button>
+        				 -->
+ 		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+			    <div class="modal-content">
+					<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        	
+			      	</div>
+			      	<div class="modal-body">
+		      			<form class="form" id="formLogin" action=<?php echo $_SERVER['PHP_SELF']?> method="post"> 
+			                <input name="username" id="username" placeholder="Username" type="text"> <br>
+			                <input name="password" id="password" placeholder="Password" type="password"><br><br>
+			                <button type="submit" id="btnLogin" name="btnLogin" class="btn btn-default btn-md">Login</button>
+			            </form>
+			            <h4 class="modal-title">Are you new here?</h4>
+		                <form class="form" id="formRegister" action=<?php echo $_SERVER['PHP_SELF']?> method="post"> 
+			               <input name="username2" id="username2" placeholder="Username" type="text"> 
+			               <input name="email" id="email" placeholder="Email" type="email">
+			               <input name="password2" id="password2" placeholder="Password" type="password"><br><br>
+			               <button type="submit" id="btnRegister" name="btnRegister" class="btn btn-default btn-md">Register now</button>
+			            </form>
+			      	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+  <!-- -->
 
 	<!-- Home start -->
 	<section id="home" class="hero landing hero-section">

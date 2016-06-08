@@ -963,6 +963,26 @@ ul.navbar-nav > li.active > a{
 .ts-flex-slider .flex-direction-nav a.flex-prev{
 	border-radius: 3px;
 }
+/* Style Modal Sign in-up */
+#modal {
+  position: absolute;
+  float: left;
+  top: auto;
+  bottom: 5%;
+  z-index: 10000;
+}
+.modal-content {
+  margin: 0 auto;
+}
+.modal-body input{
+  width: 100%; 
+  height: 40px; 
+  font-size: 15px; 
+  margin-bottom: 6px; 
+  color: #bcbcbc; 
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
 
 /* About us
 ================================================== */
