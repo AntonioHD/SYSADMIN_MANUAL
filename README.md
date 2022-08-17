@@ -1,7 +1,7 @@
 ***
 <h1 align='center'>"SYSADMIN MANUAL"</h1>
 ***
-<p align='center'>Bienvenido al "git" de Antonio Hernández Domínguez, en este repositorio encontrarás documentación acerca del uso de distitnas herramientas para la gestión y administración de sistemas informáticos</p>
+<p align='center'>Bienvenido al "git" de Antonio Hernández Domínguez, en este repositorio encontrarás documentación acerca del uso de distintas herramientas para la gestión y administración de sistemas informáticos</p>
 ***
 
 ##Chuleta GIT
